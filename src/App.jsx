@@ -17,13 +17,13 @@ let db;
 try {
   const app = initializeApp(firebaseConfig);
   db = getFirestore(app);
-} catch(e) { db = null; }
+} catch (e) { db = null; }
 
 async function saveToFirebase(collectionName, data) {
   if (!db) return;
   try {
     await addDoc(collection(db, collectionName), { ...data, createdAt: serverTimestamp() });
-  } catch(e) { console.warn("Firebase save failed:", e); }
+  } catch (e) { console.warn("Firebase save failed:", e); }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -592,92 +592,92 @@ html.dark .wa-label{background:var(--navy-deep)}
 const WHATSAPP = "971313342532";
 
 const HERO_SLIDES = [
-  { img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80", badge:"Award Winning Consultancy", title:<>Discover <span>Gulf</span> & Beyond</>, desc:"Expert travel consulting for UAE, Qatar, Saudi Arabia and all Gulf adventures, holiday packages, and visa services." },
-  { img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600&q=80", badge:"Desert Experiences", title:<>Arabian <span>Desert</span> Safaris</>, desc:"Golden dunes, camel rides, and starlit camps — let us craft the perfect desert escape just for you." },
-  { img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1600&q=80", badge:"Luxury Yachts & Cruises", title:<>Sail the <span>Arabian</span> Gulf</>, desc:"Private yacht rentals, dhow cruises, and dinner cruises with spectacular Gulf skylines as your backdrop." },
+  { img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80", badge: "Award Winning Consultancy", title: <>Discover <span>Gulf</span> & Beyond</>, desc: "Expert travel consulting for UAE, Qatar, Saudi Arabia and all Gulf adventures, holiday packages, and visa services." },
+  { img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600&q=80", badge: "Desert Experiences", title: <>Arabian <span>Desert</span> Safaris</>, desc: "Golden dunes, camel rides, and starlit camps — let us craft the perfect desert escape just for you." },
+  { img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1600&q=80", badge: "Luxury Yachts & Cruises", title: <>Sail the <span>Arabian</span> Gulf</>, desc: "Private yacht rentals, dhow cruises, and dinner cruises with spectacular Gulf skylines as your backdrop." },
 ];
 
 const EXPERIENCES = [
-  { title:"Premium Desert Safari", tag:"Bestseller", location:"Lahbab Desert", duration:"6 hrs", price:"AED 149", img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=75", summary:"Dune bashing, camel ride, live BBQ dinner, fire show, tanoura dance and hotel transfers included." },
-  { title:"Burj Khalifa At The Top", tag:"Icon", location:"Downtown Dubai", duration:"2 hrs", price:"AED 179", img:"https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=75", summary:"Timed entry support, Dubai Mall pickup options and fountain-view add-ons." },
-  { title:"Palm Jumeirah & Atlantis", tag:"Photo Route", location:"Palm Jumeirah", duration:"4 hrs", price:"AED 169", img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=600&q=75", summary:"Palm viewpoints, Atlantis, The Pointe, Bluewaters and premium hotel pickup." },
-  { title:"Dubai Luxury Superyacht", tag:"Luxury", location:"Dubai Marina", duration:"2–4 hrs", price:"AED 899", img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=600&q=75", summary:"Shared or private superyacht sailing with Burj Al Arab, Palm and Atlantis views." },
-  { title:"Dubai Aladdin Tour", tag:"Heritage", location:"Al Fahidi + Deira", duration:"4 hrs", price:"AED 129", img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=600&q=75", summary:"Souks, Creek abra ride, Old Dubai lanes, storytelling and local tastings." },
-  { title:"Museum of the Future", tag:"Future", location:"Sheikh Zayed Road", duration:"2 hrs", price:"AED 159", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=75", summary:"Ticket planning for Dubai's iconic museum with transfers included." },
-  { title:"Dubai Frame", tag:"Landmark", location:"Zabeel Park", duration:"90 min", price:"AED 69", img:"https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=75", summary:"Old-and-new Dubai viewpoint with optional city tour pairing." },
-  { title:"Aquaventure Waterpark", tag:"Family Fun", location:"Atlantis The Palm", duration:"Full day", price:"AED 349", img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=600&q=75", summary:"Waterpark tickets with private transfers and comprehensive family support." },
-  { title:"Marina Dhow Cruise Dinner", tag:"Dinner", location:"Dubai Marina", duration:"2 hrs", price:"AED 189", img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=600&q=75", summary:"Evening dhow cruise with live buffet dinner, tanoura show and marina views." },
-  { title:"Hot Air Balloon Dubai", tag:"Adventure", location:"Dubai Desert", duration:"4 hrs", price:"AED 799", img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=75", summary:"Sunrise balloon flight over the desert with falcon show and gourmet breakfast." },
+  { title: "Premium Desert Safari", tag: "Bestseller", location: "Lahbab Desert", duration: "6 hrs", price: "AED 149", img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=75", summary: "Dune bashing, camel ride, live BBQ dinner, fire show, tanoura dance and hotel transfers included." },
+  { title: "Burj Khalifa At The Top", tag: "Icon", location: "Downtown Dubai", duration: "2 hrs", price: "AED 179", img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=75", summary: "Timed entry support, Dubai Mall pickup options and fountain-view add-ons." },
+  { title: "Palm Jumeirah & Atlantis", tag: "Photo Route", location: "Palm Jumeirah", duration: "4 hrs", price: "AED 169", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=600&q=75", summary: "Palm viewpoints, Atlantis, The Pointe, Bluewaters and premium hotel pickup." },
+  { title: "Dubai Luxury Superyacht", tag: "Luxury", location: "Dubai Marina", duration: "2–4 hrs", price: "AED 899", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=600&q=75", summary: "Shared or private superyacht sailing with Burj Al Arab, Palm and Atlantis views." },
+  { title: "Dubai Aladdin Tour", tag: "Heritage", location: "Al Fahidi + Deira", duration: "4 hrs", price: "AED 129", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=600&q=75", summary: "Souks, Creek abra ride, Old Dubai lanes, storytelling and local tastings." },
+  { title: "Museum of the Future", tag: "Future", location: "Sheikh Zayed Road", duration: "2 hrs", price: "AED 159", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=75", summary: "Ticket planning for Dubai's iconic museum with transfers included." },
+  { title: "Dubai Frame", tag: "Landmark", location: "Zabeel Park", duration: "90 min", price: "AED 69", img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=75", summary: "Old-and-new Dubai viewpoint with optional city tour pairing." },
+  { title: "Aquaventure Waterpark", tag: "Family Fun", location: "Atlantis The Palm", duration: "Full day", price: "AED 349", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=600&q=75", summary: "Waterpark tickets with private transfers and comprehensive family support." },
+  { title: "Marina Dhow Cruise Dinner", tag: "Dinner", location: "Dubai Marina", duration: "2 hrs", price: "AED 189", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=600&q=75", summary: "Evening dhow cruise with live buffet dinner, tanoura show and marina views." },
+  { title: "Hot Air Balloon Dubai", tag: "Adventure", location: "Dubai Desert", duration: "4 hrs", price: "AED 799", img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=75", summary: "Sunrise balloon flight over the desert with falcon show and gourmet breakfast." },
 ];
 
 const DESTINATIONS = [
-  { name:"Dubai",     img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=75", path:"/dubai" },
-  { name:"Abu Dhabi", img:"https://images.unsplash.com/photo-1610199423203-71c7b0f45e1b?w=500&q=80", path:"/abu-dhabi" },
-  { name:"Doha",      img:"https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=500&q=80", path:"/doha" },
-  { name:"Riyadh",    img:"https://images.unsplash.com/photo-1567438954810-5dc60acd2f5f?w=500&q=80", path:"/riyadh" },
-  { name:"Muscat",    img:"https://images.unsplash.com/photo-1590056406796-ef7e5a751a4c?w=500&q=80", path:"/muscat" },
-  { name:"Kuwait",    img:"https://images.unsplash.com/photo-1610082378986-18e95d7b2096?w=500&q=80", path:"/kuwait" },
-  { name:"Bahrain",   img:"https://images.unsplash.com/photo-1609813768225-4d21d513d26d?w=500&q=80", path:"/bahrain" },
+  { name: "Dubai", img: "https://picsum.photos/seed/dubai/500/300", path: "/dubai" },
+  { name: "Abu Dhabi", img: "https://picsum.photos/seed/abudhabi/500/300", path: "/abu-dhabi" },
+  { name: "Doha", img: "https://picsum.photos/seed/doha/500/300", path: "/doha" },
+  { name: "Riyadh", img: "https://picsum.photos/seed/riyadh/500/300", path: "/riyadh" },
+  { name: "Muscat", img: "https://picsum.photos/seed/muscat/500/300", path: "/muscat" },
+  { name: "Kuwait", img: "https://picsum.photos/seed/kuwait/500/300", path: "/kuwait" },
+  { name: "Bahrain", img: "https://picsum.photos/seed/bahrain/500/300", path: "/bahrain" },
 ];
 
 const SERVICES = [
-  {emoji:"🏜️",name:"Desert Safari"},{emoji:"⛵",name:"Yacht Rental"},
-  {emoji:"🚁",name:"Helicopter Tour"},{emoji:"🛳️",name:"Dhow Cruise"},
-  {emoji:"🎈",name:"Hot Air Balloon"},{emoji:"🏙️",name:"City Tours"},
-  {emoji:"🏖️",name:"Beach Picnic"},{emoji:"🛂",name:"UAE Visa"},
+  { emoji: "🏜️", name: "Desert Safari" }, { emoji: "⛵", name: "Yacht Rental" },
+  { emoji: "🚁", name: "Helicopter Tour" }, { emoji: "🛳️", name: "Dhow Cruise" },
+  { emoji: "🎈", name: "Hot Air Balloon" }, { emoji: "🏙️", name: "City Tours" },
+  { emoji: "🏖️", name: "Beach Picnic" }, { emoji: "🛂", name: "UAE Visa" },
 ];
 
 const WHY_ITEMS = [
-  {icon:"🌍",title:"Local Expertise",desc:"Based in Dubai with deep, first-hand knowledge of every Gulf destination and activity."},
-  {icon:"💰",title:"Best Price Guarantee",desc:"Competitive, transparent pricing — no hidden costs, no surprises when you travel."},
-  {icon:"🛡️",title:"Trusted & Licensed",desc:"Fully licensed tour operator with 5+ years of excellence and 15,000+ happy travellers."},
-  {icon:"📞",title:"24/7 WhatsApp Support",desc:"Round-the-clock support from booking to travel day — always just a message away."},
+  { icon: "🌍", title: "Local Expertise", desc: "Based in Dubai with deep, first-hand knowledge of every Gulf destination and activity." },
+  { icon: "💰", title: "Best Price Guarantee", desc: "Competitive, transparent pricing — no hidden costs, no surprises when you travel." },
+  { icon: "🛡️", title: "Trusted & Licensed", desc: "Fully licensed tour operator with 5+ years of excellence and 15,000+ happy travellers." },
+  { icon: "📞", title: "24/7 WhatsApp Support", desc: "Round-the-clock support from booking to travel day — always just a message away." },
 ];
 
 const TESTIMONIALS = [
-  {stars:"★★★★★",text:"Desert safari pickup was on time and the team explained every option clearly before we paid. Absolutely amazing experience!",name:"Aarav Sharma",initials:"AS",from:"Mumbai, India"},
-  {stars:"★★★★★",text:"They planned Burj Khalifa, Dubai Frame and Old Dubai in one relaxed day. Highly recommend for families — so easy!",name:"Priya Nair",initials:"PN",from:"Kochi, India"},
-  {stars:"★★★★★",text:"The yacht booking was smooth, no last minute confusion, and WhatsApp support was instant. Will book again.",name:"Rohan Mehta",initials:"RM",from:"Delhi, India"},
+  { stars: "★★★★★", text: "Desert safari pickup was on time and the team explained every option clearly before we paid. Absolutely amazing experience!", name: "Aarav Sharma", initials: "AS", from: "Mumbai, India" },
+  { stars: "★★★★★", text: "They planned Burj Khalifa, Dubai Frame and Old Dubai in one relaxed day. Highly recommend for families — so easy!", name: "Priya Nair", initials: "PN", from: "Kochi, India" },
+  { stars: "★★★★★", text: "The yacht booking was smooth, no last minute confusion, and WhatsApp support was instant. Will book again.", name: "Rohan Mehta", initials: "RM", from: "Delhi, India" },
 ];
 
 const ITINERARY = [
-  ["Day 1","Arrival & private airport transfer, Burj Khalifa sunset viewing, Dubai Fountain show at night"],
-  ["Day 2","Morning desert safari, camel ride, sandboarding, BBQ camp dinner & live shows"],
-  ["Day 3","Old Dubai souks, Creek abra crossing, Dubai Frame, Marina Dhow Cruise dinner"],
-  ["Day 4","Abu Dhabi day trip OR Palm Jumeirah beach day + optional Aquaventure Waterpark"],
+  ["Day 1", "Arrival & private airport transfer, Burj Khalifa sunset viewing, Dubai Fountain show at night"],
+  ["Day 2", "Morning desert safari, camel ride, sandboarding, BBQ camp dinner & live shows"],
+  ["Day 3", "Old Dubai souks, Creek abra crossing, Dubai Frame, Marina Dhow Cruise dinner"],
+  ["Day 4", "Abu Dhabi day trip OR Palm Jumeirah beach day + optional Aquaventure Waterpark"],
 ];
 
-const CHIPS = ["Visa Help","Airport Transfers","Hotel Booking","Private Guides","Group Tours","Honeymoon Plans","Family Plans"];
+const CHIPS = ["Visa Help", "Airport Transfers", "Hotel Booking", "Private Guides", "Group Tours", "Honeymoon Plans", "Family Plans"];
 
-const BUDGET_OPTS = ["Flexible","Under AED 500","AED 500–1,500","AED 1,500–5,000","Luxury / Private"];
-const BUDGET_RANGES = ["Under AED 500","AED 500–1,000","AED 1,000–2,000","AED 2,000–5,000","Above AED 5,000","Flexible"];
-const CONTACT_SVCS = ["Desert Safari","Yacht Rental","City Tours","Burj Khalifa","Dubai Frame","Museum of the Future","Dhow Cruise","Aquaventure","Hot Air Balloon","Helicopter Tour","Family Trip","Honeymoon Package","Custom Quote"];
+const BUDGET_OPTS = ["Flexible", "Under AED 500", "AED 500–1,500", "AED 1,500–5,000", "Luxury / Private"];
+const BUDGET_RANGES = ["Under AED 500", "AED 500–1,000", "AED 1,000–2,000", "AED 2,000–5,000", "Above AED 5,000", "Flexible"];
+const CONTACT_SVCS = ["Desert Safari", "Yacht Rental", "City Tours", "Burj Khalifa", "Dubai Frame", "Museum of the Future", "Dhow Cruise", "Aquaventure", "Hot Air Balloon", "Helicopter Tour", "Family Trip", "Honeymoon Package", "Custom Quote"];
 
-const INIT_LEAD = {name:"",phone:"",email:"",dateFrom:"",dateTo:"",guests:"2 Persons",packageName:"Custom Quote",budget:"Flexible",message:""};
+const INIT_LEAD = { name: "", phone: "", email: "", dateFrom: "", dateTo: "", guests: "2 Persons", packageName: "Custom Quote", budget: "Flexible", message: "" };
 
 const ABOUT_VALS = [
-  ["Clarity","Simple advice before booking, clear inclusions, and zero confusing travel jargon."],
-  ["Care","Trips are planned around families, first-time visitors, business travellers, and groups."],
-  ["Local Reach","Dubai tours, UAE visa guidance, airport transfers, hotels, and attraction access in one place."],
+  ["Clarity", "Simple advice before booking, clear inclusions, and zero confusing travel jargon."],
+  ["Care", "Trips are planned around families, first-time visitors, business travellers, and groups."],
+  ["Local Reach", "Dubai tours, UAE visa guidance, airport transfers, hotels, and attraction access in one place."],
 ];
-const ABOUT_HLS = ["UAE visa consultancy and document guidance","Dubai tours, safaris, yachts and landmark experiences","Custom itineraries for families, couples and corporate groups","Fast WhatsApp support from enquiry to travel day"];
+const ABOUT_HLS = ["UAE visa consultancy and document guidance", "Dubai tours, safaris, yachts and landmark experiences", "Custom itineraries for families, couples and corporate groups", "Fast WhatsApp support from enquiry to travel day"];
 
 const DESTS_DATA = {
-  dubai:{name:"Dubai",country:"United Arab Emirates",flag:"🇦🇪",img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80",desc:"The city of gold — a breathtaking blend of futuristic skylines, golden desert dunes, luxury yachts, and authentic Arabian heritage.",tours:[{name:"Premium Desert Safari",tag:"Bestseller",location:"Lahbab Desert",duration:"6 hrs",price:"AED 149",img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75"},{name:"Burj Khalifa At The Top",tag:"Icon",location:"Downtown",duration:"2 hrs",price:"AED 179",img:"https://images.unsplash.com/photo-1518684079-3c830dcef090?w=500&q=75"},{name:"Luxury Superyacht",tag:"Luxury",location:"Dubai Marina",duration:"2–4 hrs",price:"AED 899",img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=500&q=75"}]},
-  "abu-dhabi":{name:"Abu Dhabi",country:"United Arab Emirates",flag:"🇦🇪",img:"https://images.unsplash.com/photo-1610199423203-71c7b0f45e1b?w=1400&q=80",desc:"The UAE capital — home to the majestic Sheikh Zayed Grand Mosque, Yas Island's thrills, and rich cultural heritage.",tours:[{name:"Grand Mosque Tour",tag:"Heritage",location:"Abu Dhabi",duration:"3 hrs",price:"AED 99",img:"https://images.unsplash.com/photo-1610199423203-71c7b0f45e1b?w=500&q=75"},{name:"Yas Island Day",tag:"Thrill",location:"Yas Island",duration:"Full day",price:"AED 399",img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=75"},{name:"Abu Dhabi City Tour",tag:"Sightseeing",location:"Abu Dhabi",duration:"8 hrs",price:"AED 199",img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75"}]},
-  doha:{name:"Doha",country:"Qatar",flag:"🇶🇦",img:"https://images.unsplash.com/photo-1580674684081-827b1f2c0c70?w=1400&q=80",desc:"Pearl of the Arabian Peninsula — stunning Corniche, Souq Waqif, Museum of Islamic Art, and modern marvels.",tours:[{name:"Doha City Tour",tag:"Culture",location:"Doha",duration:"6 hrs",price:"QAR 149",img:"https://images.unsplash.com/photo-1580674684081-827b1f2c0c70?w=500&q=75"},{name:"Souq Waqif Experience",tag:"Heritage",location:"Old Doha",duration:"3 hrs",price:"QAR 99",img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75"},{name:"Qatar Desert Safari",tag:"Adventure",location:"Inland Sea",duration:"8 hrs",price:"QAR 249",img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75"}]},
-  riyadh:{name:"Riyadh",country:"Saudi Arabia",flag:"🇸🇦",img:"https://images.unsplash.com/photo-1591604466107-96bdca0954e3?w=1400&q=80",desc:"Saudi Arabia's thriving capital — ancient heritage meets a bold futuristic vision, from the Edge of the World to DIRIYAH.",tours:[{name:"Edge of World",tag:"Adventure",location:"Riyadh Outskirts",duration:"10 hrs",price:"SAR 249",img:"https://images.unsplash.com/photo-1591604466107-96bdca0954e3?w=500&q=75"},{name:"Riyadh City Tour",tag:"Sightseeing",location:"Riyadh",duration:"6 hrs",price:"SAR 149",img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=75"},{name:"DIRIYAH Heritage",tag:"Heritage",location:"DIRIYAH",duration:"4 hrs",price:"SAR 99",img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75"}]},
-  muscat:{name:"Muscat",country:"Oman",flag:"🇴🇲",img:"https://images.unsplash.com/photo-1590056406796-ef7e5a751a4c?w=1400&q=80",desc:"Oman's serene capital — whitewashed mosques, dramatic mountain wadis, ancient forts, and unspoilt coastlines.",tours:[{name:"Muscat City Tour",tag:"Sightseeing",location:"Muscat",duration:"7 hrs",price:"OMR 35",img:"https://images.unsplash.com/photo-1590056406796-ef7e5a751a4c?w=500&q=75"},{name:"Wahiba Sands Safari",tag:"Desert",location:"Wahiba",duration:"Full day",price:"OMR 65",img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75"},{name:"Wadi Shab Hike",tag:"Nature",location:"Sur",duration:"8 hrs",price:"OMR 45",img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75"}]},
-  kuwait:{name:"Kuwait",country:"Kuwait",flag:"🇰🇼",img:"https://images.unsplash.com/photo-1610082378986-18e95d7b2096?w=1400&q=80",desc:"A hidden Gulf gem — iconic Kuwait Towers, vibrant Souq Al-Mubarakiya, and a rich history waiting to be explored.",tours:[{name:"Kuwait City Tour",tag:"Sightseeing",location:"Kuwait City",duration:"5 hrs",price:"KWD 29",img:"https://images.unsplash.com/photo-1610082378986-18e95d7b2096?w=500&q=75"},{name:"Kuwait Heritage Walk",tag:"Culture",location:"Old Kuwait",duration:"3 hrs",price:"KWD 19",img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75"},{name:"Desert Day Trip",tag:"Adventure",location:"Kuwait Desert",duration:"6 hrs",price:"KWD 39",img:"https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75"}]},
-  bahrain:{name:"Bahrain",country:"Bahrain",flag:"🇧🇭",img:"https://images.unsplash.com/photo-1609813768225-4d21d513d26d?w=1400&q=80",desc:"Island Kingdom of the Gulf — F1 circuit, ancient Bahrain Fort, pearl diving heritage, and modern luxury.",tours:[{name:"Bahrain City Tour",tag:"Sightseeing",location:"Manama",duration:"5 hrs",price:"BHD 19",img:"https://images.unsplash.com/photo-1609813768225-4d21d513d26d?w=500&q=75"},{name:"Bahrain Fort & Museum",tag:"Heritage",location:"Bahrain Fort",duration:"3 hrs",price:"BHD 12",img:"https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75"},{name:"Pearl Diving Experience",tag:"Culture",location:"Manama Bay",duration:"4 hrs",price:"BHD 29",img:"https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=500&q=75"}]},
+  dubai: { name: "Dubai", country: "United Arab Emirates", flag: "🇦🇪", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80", desc: "The city of gold — a breathtaking blend of futuristic skylines, golden desert dunes, luxury yachts, and authentic Arabian heritage.", tours: [{ name: "Premium Desert Safari", tag: "Bestseller", location: "Lahbab Desert", duration: "6 hrs", price: "AED 149", img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75" }, { name: "Burj Khalifa At The Top", tag: "Icon", location: "Downtown", duration: "2 hrs", price: "AED 179", img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=500&q=75" }, { name: "Luxury Superyacht", tag: "Luxury", location: "Dubai Marina", duration: "2–4 hrs", price: "AED 899", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=500&q=75" }] },
+  "abu-dhabi": { name: "Abu Dhabi", country: "United Arab Emirates", flag: "🇦🇪", img: "https://images.unsplash.com/photo-1610199423203-71c7b0f45e1b?w=1400&q=80", desc: "The UAE capital — home to the majestic Sheikh Zayed Grand Mosque, Yas Island's thrills, and rich cultural heritage.", tours: [{ name: "Grand Mosque Tour", tag: "Heritage", location: "Abu Dhabi", duration: "3 hrs", price: "AED 99", img: "https://images.unsplash.com/photo-1610199423203-71c7b0f45e1b?w=500&q=75" }, { name: "Yas Island Day", tag: "Thrill", location: "Yas Island", duration: "Full day", price: "AED 399", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=75" }, { name: "Abu Dhabi City Tour", tag: "Sightseeing", location: "Abu Dhabi", duration: "8 hrs", price: "AED 199", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75" }] },
+  doha: { name: "Doha", country: "Qatar", flag: "🇶🇦", img: "https://images.unsplash.com/photo-1580674684081-827b1f2c0c70?w=1400&q=80", desc: "Pearl of the Arabian Peninsula — stunning Corniche, Souq Waqif, Museum of Islamic Art, and modern marvels.", tours: [{ name: "Doha City Tour", tag: "Culture", location: "Doha", duration: "6 hrs", price: "QAR 149", img: "https://images.unsplash.com/photo-1580674684081-827b1f2c0c70?w=500&q=75" }, { name: "Souq Waqif Experience", tag: "Heritage", location: "Old Doha", duration: "3 hrs", price: "QAR 99", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75" }, { name: "Qatar Desert Safari", tag: "Adventure", location: "Inland Sea", duration: "8 hrs", price: "QAR 249", img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75" }] },
+  riyadh: { name: "Riyadh", country: "Saudi Arabia", flag: "🇸🇦", img: "https://images.unsplash.com/photo-1591604466107-96bdca0954e3?w=1400&q=80", desc: "Saudi Arabia's thriving capital — ancient heritage meets a bold futuristic vision, from the Edge of the World to DIRIYAH.", tours: [{ name: "Edge of World", tag: "Adventure", location: "Riyadh Outskirts", duration: "10 hrs", price: "SAR 249", img: "https://images.unsplash.com/photo-1591604466107-96bdca0954e3?w=500&q=75" }, { name: "Riyadh City Tour", tag: "Sightseeing", location: "Riyadh", duration: "6 hrs", price: "SAR 149", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=75" }, { name: "DIRIYAH Heritage", tag: "Heritage", location: "DIRIYAH", duration: "4 hrs", price: "SAR 99", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75" }] },
+  muscat: { name: "Muscat", country: "Oman", flag: "🇴🇲", img: "https://images.unsplash.com/photo-1590056406796-ef7e5a751a4c?w=1400&q=80", desc: "Oman's serene capital — whitewashed mosques, dramatic mountain wadis, ancient forts, and unspoilt coastlines.", tours: [{ name: "Muscat City Tour", tag: "Sightseeing", location: "Muscat", duration: "7 hrs", price: "OMR 35", img: "https://images.unsplash.com/photo-1590056406796-ef7e5a751a4c?w=500&q=75" }, { name: "Wahiba Sands Safari", tag: "Desert", location: "Wahiba", duration: "Full day", price: "OMR 65", img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75" }, { name: "Wadi Shab Hike", tag: "Nature", location: "Sur", duration: "8 hrs", price: "OMR 45", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75" }] },
+  kuwait: { name: "Kuwait", country: "Kuwait", flag: "🇰🇼", img: "https://images.unsplash.com/photo-1610082378986-18e95d7b2096?w=1400&q=80", desc: "A hidden Gulf gem — iconic Kuwait Towers, vibrant Souq Al-Mubarakiya, and a rich history waiting to be explored.", tours: [{ name: "Kuwait City Tour", tag: "Sightseeing", location: "Kuwait City", duration: "5 hrs", price: "KWD 29", img: "https://images.unsplash.com/photo-1610082378986-18e95d7b2096?w=500&q=75" }, { name: "Kuwait Heritage Walk", tag: "Culture", location: "Old Kuwait", duration: "3 hrs", price: "KWD 19", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75" }, { name: "Desert Day Trip", tag: "Adventure", location: "Kuwait Desert", duration: "6 hrs", price: "KWD 39", img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75" }] },
+  bahrain: { name: "Bahrain", country: "Bahrain", flag: "🇧🇭", img: "https://images.unsplash.com/photo-1609813768225-4d21d513d26d?w=1400&q=80", desc: "Island Kingdom of the Gulf — F1 circuit, ancient Bahrain Fort, pearl diving heritage, and modern luxury.", tours: [{ name: "Bahrain City Tour", tag: "Sightseeing", location: "Manama", duration: "5 hrs", price: "BHD 19", img: "https://images.unsplash.com/photo-1609813768225-4d21d513d26d?w=500&q=75" }, { name: "Bahrain Fort & Museum", tag: "Heritage", location: "Bahrain Fort", duration: "3 hrs", price: "BHD 12", img: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?w=500&q=75" }, { name: "Pearl Diving Experience", tag: "Culture", location: "Manama Bay", duration: "4 hrs", price: "BHD 29", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=500&q=75" }] },
 };
 
 /* ═══════════════════════════════════════════════════════════════
    HELPERS
 ═══════════════════════════════════════════════════════════════ */
 function buildWA(d) {
-  const dr = (d.dateFrom||d.dateTo)?`${d.dateFrom||"Flexible"} → ${d.dateTo||"Flexible"}`:"Flexible";
-  const lines = ["Hi Gulf Apex! I want to enquire.",`Package: ${d.packageName}`,`Name: ${d.name||"Not provided"}`,`Date: ${dr}`,`Guests: ${d.guests}`,d.phone?`Phone: ${d.phone}`:null,d.email?`Email: ${d.email}`:null,`Budget: ${d.budget}`,d.message?`Message: ${d.message}`:null].filter(Boolean).join("\n");
+  const dr = (d.dateFrom || d.dateTo) ? `${d.dateFrom || "Flexible"} → ${d.dateTo || "Flexible"}` : "Flexible";
+  const lines = ["Hi Gulf Apex! I want to enquire.", `Package: ${d.packageName}`, `Name: ${d.name || "Not provided"}`, `Date: ${dr}`, `Guests: ${d.guests}`, d.phone ? `Phone: ${d.phone}` : null, d.email ? `Email: ${d.email}` : null, `Budget: ${d.budget}`, d.message ? `Message: ${d.message}` : null].filter(Boolean).join("\n");
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines)}`;
 }
 
@@ -735,22 +735,22 @@ function Modal({ lead, setLead, onClose }) {
         </div>
         <form className="fgrid" onSubmit={submit}>
           <div className="frow">
-            <label className="flabel">Full Name *<input required className="finput" placeholder="Your name" value={lead.name} onChange={e=>s("name",e.target.value)}/></label>
-            <label className="flabel">Phone *<input required className="finput" type="tel" placeholder="+971…" value={lead.phone} onChange={e=>s("phone",e.target.value)}/></label>
+            <label className="flabel">Full Name *<input required className="finput" placeholder="Your name" value={lead.name} onChange={e => s("name", e.target.value)} /></label>
+            <label className="flabel">Phone *<input required className="finput" type="tel" placeholder="+971…" value={lead.phone} onChange={e => s("phone", e.target.value)} /></label>
           </div>
-          <label className="flabel">Email<input className="finput" type="email" placeholder="you@email.com" value={lead.email} onChange={e=>s("email",e.target.value)}/></label>
+          <label className="flabel">Email<input className="finput" type="email" placeholder="you@email.com" value={lead.email} onChange={e => s("email", e.target.value)} /></label>
           <div className="frow">
-            <label className="flabel">Travel From<input className="finput" type="date" value={lead.dateFrom} onChange={e=>s("dateFrom",e.target.value)}/></label>
-            <label className="flabel">Travel To<input className="finput" type="date" value={lead.dateTo} onChange={e=>s("dateTo",e.target.value)}/></label>
+            <label className="flabel">Travel From<input className="finput" type="date" value={lead.dateFrom} onChange={e => s("dateFrom", e.target.value)} /></label>
+            <label className="flabel">Travel To<input className="finput" type="date" value={lead.dateTo} onChange={e => s("dateTo", e.target.value)} /></label>
           </div>
           <div className="frow">
-            <label className="flabel">Guests<select className="finput" value={lead.guests} onChange={e=>s("guests",e.target.value)}>{["1 Person","2 Persons","3–5 Persons","6–10 Persons","10+ Persons"].map(g=><option key={g}>{g}</option>)}</select></label>
-            <label className="flabel">Budget<select className="finput" value={lead.budget} onChange={e=>s("budget",e.target.value)}>{BUDGET_OPTS.map(b=><option key={b}>{b}</option>)}</select></label>
+            <label className="flabel">Guests<select className="finput" value={lead.guests} onChange={e => s("guests", e.target.value)}>{["1 Person", "2 Persons", "3–5 Persons", "6–10 Persons", "10+ Persons"].map(g => <option key={g}>{g}</option>)}</select></label>
+            <label className="flabel">Budget<select className="finput" value={lead.budget} onChange={e => s("budget", e.target.value)}>{BUDGET_OPTS.map(b => <option key={b}>{b}</option>)}</select></label>
           </div>
-          <label className="flabel">Experience<select className="finput" value={lead.packageName} onChange={e=>s("packageName",e.target.value)}><option>Custom Quote</option>{EXPERIENCES.map(ex=><option key={ex.title}>{ex.title}</option>)}</select></label>
-          <label className="flabel">Message<textarea className="finput" rows="3" placeholder="Hotel, pickup area, special requests…" value={lead.message} onChange={e=>s("message",e.target.value)}/></label>
+          <label className="flabel">Experience<select className="finput" value={lead.packageName} onChange={e => s("packageName", e.target.value)}><option>Custom Quote</option>{EXPERIENCES.map(ex => <option key={ex.title}>{ex.title}</option>)}</select></label>
+          <label className="flabel">Message<textarea className="finput" rows="3" placeholder="Hotel, pickup area, special requests…" value={lead.message} onChange={e => s("message", e.target.value)} /></label>
           {status && <p className="form-status-ok">{status}</p>}
-          <button className="btn btn-primary full" type="submit" disabled={busy}>{busy?"Opening WhatsApp…":"📲 Enquire via WhatsApp"}</button>
+          <button className="btn btn-primary full" type="submit" disabled={busy}>{busy ? "Opening WhatsApp…" : "📲 Enquire via WhatsApp"}</button>
           <p className="form-note">* Required. You'll be contacted via WhatsApp or phone.</p>
         </form>
       </div>
@@ -762,12 +762,12 @@ function Modal({ lead, setLead, onClose }) {
    HEADER
 ═══════════════════════════════════════════════════════════════ */
 const NAV_ITEMS = [
-  {label:"Home",to:"/"},
-  {label:"Destinations",sub:[{label:"Dubai",to:"/dubai"},{label:"Abu Dhabi",to:"/abu-dhabi"},{label:"Doha",to:"/doha"},{label:"Riyadh",to:"/riyadh"},{label:"Muscat",to:"/muscat"},{label:"Kuwait",to:"/kuwait"},{label:"Bahrain",to:"/bahrain"}]},
-  {label:"Services",sub:[{label:"UAE Visa Services",to:"/services/visa"},{label:"Holiday Packages",to:"/services/packages"},{label:"Airport Transfers",to:"/services/transfers"}]},
-  {label:"Visa Consultation",to:"/visa-consultation"},
-  {label:"About",to:"/about"},
-  {label:"Contact",to:"/contact"},
+  { label: "Home", to: "/" },
+  { label: "Destinations", sub: [{ label: "Dubai", to: "/dubai" }, { label: "Abu Dhabi", to: "/abu-dhabi" }, { label: "Doha", to: "/doha" }, { label: "Riyadh", to: "/riyadh" }, { label: "Muscat", to: "/muscat" }, { label: "Kuwait", to: "/kuwait" }, { label: "Bahrain", to: "/bahrain" }] },
+  { label: "Services", sub: [{ label: "UAE Visa Services", to: "/services/visa" }, { label: "Holiday Packages", to: "/services/packages" }, { label: "Airport Transfers", to: "/services/transfers" }] },
+  { label: "Visa Consultation", to: "/visa-consultation" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 function Header() {
@@ -794,7 +794,7 @@ function Header() {
         <div className="topbar-right"><span>🇦🇪 Dubai, UAE</span><span>🇮🇳 India</span></div>
       </div>
     </div>
-    <header className={`header${scrolled?" scrolled":""}`}>
+    <header className={`header${scrolled ? " scrolled" : ""}`}>
       <div className="header-inner">
         <Link to="/" className="logo">
           <div className="logo-icon">GA</div>
@@ -802,22 +802,22 @@ function Header() {
         </Link>
         <nav className="nav">
           {NAV_ITEMS.map(item => item.sub ? (
-            <div key={item.label} className="nav-item-wrap" onMouseEnter={()=>setDd(item.label)} onMouseLeave={()=>setDd(null)}>
+            <div key={item.label} className="nav-item-wrap" onMouseEnter={() => setDd(item.label)} onMouseLeave={() => setDd(null)}>
               <div className="nav-item">
                 {item.label}<span className="nav-caret">▾</span>
               </div>
-              {dd===item.label && <div className="dropdown">{item.sub.map(s=><Link key={s.label} to={s.to}>{s.label}</Link>)}</div>}
+              {dd === item.label && <div className="dropdown">{item.sub.map(s => <Link key={s.label} to={s.to}>{s.label}</Link>)}</div>}
             </div>
           ) : (
-            <NavLink key={item.label} to={item.to} end={item.to==="/"} className={({isActive})=>`nav-item${isActive?" active":""}`}>{item.label}</NavLink>
+            <NavLink key={item.label} to={item.to} end={item.to === "/"} className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}>{item.label}</NavLink>
           ))}
           <Link to="/contact" className="nav-item nav-cta">Enquire Now</Link>
         </nav>
-        <button className="theme-toggle" onClick={()=>setDark(v=>!v)} aria-label="Toggle theme">
-          {dark ? (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>) : (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>)}
+        <button className="theme-toggle" onClick={() => setDark(v => !v)} aria-label="Toggle theme">
+          {dark ? (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>) : (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>)}
         </button>
-        <button className={`hamburger${open?" open":""}`} onClick={()=>setOpen(v=>!v)} aria-label="Menu">
-          <span/><span/><span/>
+        <button className={`hamburger${open ? " open" : ""}`} onClick={() => setOpen(v => !v)} aria-label="Menu">
+          <span /><span /><span />
         </button>
       </div>
       {open && (
@@ -825,12 +825,12 @@ function Header() {
           {NAV_ITEMS.map(item => item.sub ? (
             <div key={item.label}>
               <div className="mob-section">{item.label}</div>
-              {item.sub.map(s=><Link key={s.label} to={s.to} className="mob-link sub" onClick={()=>setOpen(false)}>{s.label}</Link>)}
+              {item.sub.map(s => <Link key={s.label} to={s.to} className="mob-link sub" onClick={() => setOpen(false)}>{s.label}</Link>)}
             </div>
           ) : (
-            <Link key={item.label} to={item.to} className="mob-link" onClick={()=>setOpen(false)}>{item.label}</Link>
+            <Link key={item.label} to={item.to} className="mob-link" onClick={() => setOpen(false)}>{item.label}</Link>
           ))}
-          <Link to="/contact" className="mob-link cta" onClick={()=>setOpen(false)}>Enquire Now</Link>
+          <Link to="/contact" className="mob-link cta" onClick={() => setOpen(false)}>Enquire Now</Link>
         </div>
       )}
     </header>
@@ -854,12 +854,12 @@ function Footer() {
             </div>
             <p className="footer-about">A premier travel consultancy based in Dubai — desert safaris, yacht rentals, city tours, holiday packages, and hassle-free Gulf visa services. Built around the way you want to move.</p>
             <div className="footer-socials">
-              {[["f","Facebook"],["ig","Instagram"],["wa","WhatsApp"],["in","LinkedIn"],["yt","YouTube"]].map(([l,a])=>(
-                <a key={l} href="#" className="footer-social" aria-label={a} style={l==="wa"?{background:"#25D366",borderColor:"#25D366",color:"#fff"}:l==="in"?{background:"#0077B5",borderColor:"#0077B5",color:"#fff"}:{}}>{l}</a>
+              {[["f", "Facebook"], ["ig", "Instagram"], ["wa", "WhatsApp"], ["in", "LinkedIn"], ["yt", "YouTube"]].map(([l, a]) => (
+                <a key={l} href="#" className="footer-social" aria-label={a} style={l === "wa" ? { background: "#25D366", borderColor: "#25D366", color: "#fff" } : l === "in" ? { background: "#0077B5", borderColor: "#0077B5", color: "#fff" } : {}}>{l}</a>
               ))}
             </div>
-            <div className="footer-badge-row" style={{marginTop:22}}>
-              {["✅ Licensed Operator","⭐ 4.9 Rated","📍 Dubai Based"].map(b=><div key={b} className="footer-badge">{b}</div>)}
+            <div className="footer-badge-row" style={{ marginTop: 22 }}>
+              {["✅ Licensed Operator", "⭐ 4.9 Rated", "📍 Dubai Based"].map(b => <div key={b} className="footer-badge">{b}</div>)}
             </div>
           </div>
 
@@ -867,7 +867,7 @@ function Footer() {
           <div>
             <div className="footer-col-title">Services</div>
             <div className="footer-links">
-              {["Desert Safari","Yacht Rental","City Tours","Holiday Packages","UAE Visa","Hot Air Balloon","Dhow Cruise","Helicopter Tour","Visa Consultation"].map(l=>(
+              {["Desert Safari", "Yacht Rental", "City Tours", "Holiday Packages", "UAE Visa", "Hot Air Balloon", "Dhow Cruise", "Helicopter Tour", "Visa Consultation"].map(l => (
                 <a key={l} href="#">{l}</a>
               ))}
             </div>
@@ -877,7 +877,7 @@ function Footer() {
           <div>
             <div className="footer-col-title">Destinations</div>
             <div className="footer-links">
-              {[["Dubai","/dubai"],["Abu Dhabi","/abu-dhabi"],["Doha","/doha"],["Riyadh","/riyadh"],["Muscat","/muscat"],["Kuwait","/kuwait"],["Bahrain","/bahrain"]].map(([l,p])=>(
+              {[["Dubai", "/dubai"], ["Abu Dhabi", "/abu-dhabi"], ["Doha", "/doha"], ["Riyadh", "/riyadh"], ["Muscat", "/muscat"], ["Kuwait", "/kuwait"], ["Bahrain", "/bahrain"]].map(([l, p]) => (
                 <Link key={l} to={p}>{l}</Link>
               ))}
             </div>
@@ -887,15 +887,15 @@ function Footer() {
           <div>
             <div className="footer-col-title">Contact Us</div>
             {[
-              ["📍","Office 301, Business Bay, Dubai, UAE"],
-              ["📞",<a href="tel:+971313342532">+971 313 342 532</a>],
-              ["✉️",<a href="mailto:info@gulfapexconsultant.com">info@gulfapexconsultant.com</a>],
-              ["🕐","Mon–Sat: 9 AM – 8 PM\nSun: 10 AM – 6 PM"],
-              ["👤","Gulf Apex Consultant L.L.C.\nTravel & Visa Experts, Dubai"],
-            ].map(([icon,text],i)=>(
+              ["📍", "Office 301, Business Bay, Dubai, UAE"],
+              ["📞", <a href="tel:+971313342532">+971 313 342 532</a>],
+              ["✉️", <a href="mailto:info@gulfapexconsultant.com">info@gulfapexconsultant.com</a>],
+              ["🕐", "Mon–Sat: 9 AM – 8 PM\nSun: 10 AM – 6 PM"],
+              ["👤", "Gulf Apex Consultant L.L.C.\nTravel & Visa Experts, Dubai"],
+            ].map(([icon, text], i) => (
               <div key={i} className="footer-contact-item">
                 <span className="fci-icon">{icon}</span>
-                <span className="fci-text" style={{whiteSpace:"pre-line"}}>{text}</span>
+                <span className="fci-text" style={{ whiteSpace: "pre-line" }}>{text}</span>
               </div>
             ))}
           </div>
@@ -906,12 +906,12 @@ function Footer() {
       <div className="footer-mid">
         <div className="footer-mid-inner">
           <div>
-            <div style={{color:"#F9C96E",fontWeight:700,fontSize:14,marginBottom:4}}>📬 Get Exclusive Travel Deals</div>
-            <div style={{color:"rgba(255,255,255,.42)",fontSize:13}}>Subscribe for Gulf travel tips, exclusive offers and visa updates.</div>
+            <div style={{ color: "#F9C96E", fontWeight: 700, fontSize: 14, marginBottom: 4 }}>📬 Get Exclusive Travel Deals</div>
+            <div style={{ color: "rgba(255,255,255,.42)", fontSize: 13 }}>Subscribe for Gulf travel tips, exclusive offers and visa updates.</div>
           </div>
           <div className="footer-newsletter">
-            <input type="email" placeholder="Your email address" value={email} onChange={e=>setEmail(e.target.value)}/>
-            <button onClick={()=>{if(email){alert("Subscribed! We'll be in touch soon.");setEmail("");}}}>Subscribe →</button>
+            <input type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
+            <button onClick={() => { if (email) { alert("Subscribed! We'll be in touch soon."); setEmail(""); } }}>Subscribe →</button>
           </div>
         </div>
       </div>
@@ -919,7 +919,7 @@ function Footer() {
       {/* Bottom */}
       <div className="footer-bottom">
         <div className="footer-bottom-inner">
-          <span>© 2025 Gulf Apex Consultant L.L.C. All rights reserved.</span>
+          <span>© 2026 Gulf Apex Consultant L.L.C. All rights reserved.</span>
           <div>
             <Link to="/about">About</Link>
             <a href="#">Privacy Policy</a>
@@ -940,7 +940,7 @@ function WAFloat() {
     <div className="wa-float">
       <div className="wa-label">Chat on WhatsApp</div>
       <a href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to enquire about a trip.")}`} target="_blank" rel="noopener noreferrer" className="wa-btn" aria-label="WhatsApp">
-        <svg viewBox="0 0 32 32" fill="white"><path d="M16 3.5A12.4 12.4 0 0 0 5.3 22.2L4 28l5.9-1.5A12.4 12.4 0 1 0 16 3.5Zm0 22.6c-2 0-3.9-.6-5.5-1.6l-.4-.2-3.2.8.8-3.1-.2-.4A10.1 10.1 0 1 1 16 26.1Zm5.8-7.5c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-.9 1.1c-.2.2-.4.3-.7.1a8.3 8.3 0 0 1-4.1-3.6c-.2-.3 0-.5.1-.7l.5-.6c.1-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.3 4.8.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.5Z"/></svg>
+        <svg viewBox="0 0 32 32" fill="white"><path d="M16 3.5A12.4 12.4 0 0 0 5.3 22.2L4 28l5.9-1.5A12.4 12.4 0 1 0 16 3.5Zm0 22.6c-2 0-3.9-.6-5.5-1.6l-.4-.2-3.2.8.8-3.1-.2-.4A10.1 10.1 0 1 1 16 26.1Zm5.8-7.5c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-.9 1.1c-.2.2-.4.3-.7.1a8.3 8.3 0 0 1-4.1-3.6c-.2-.3 0-.5.1-.7l.5-.6c.1-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.3 4.8.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.5Z" /></svg>
       </a>
     </div>
   );
@@ -949,7 +949,7 @@ function WAFloat() {
 /* ═══════════════════════════════════════════════════════════════
    CTA BAND (shared)
 ═══════════════════════════════════════════════════════════════ */
-function CTABand({title, desc, onEnquire}) {
+function CTABand({ title, desc, onEnquire }) {
   return (
     <div className="cta-band">
       <div className="cta-inner">
@@ -971,44 +971,44 @@ function HomePage() {
   const [modal, setModal] = useState(false);
   const [lead, setLead] = useState(INIT_LEAD);
   const [activeExp, setActiveExp] = useState(EXPERIENCES[0].title);
-  const [search, setSearch] = useState({destination:"",tourType:"",date:"",guests:"2 Persons"});
+  const [search, setSearch] = useState({ destination: "", tourType: "", date: "", guests: "2 Persons" });
   const timer = useRef(null);
   const nav = useNavigate();
 
-  const exp = useMemo(()=>EXPERIENCES.find(e=>e.title===activeExp)||EXPERIENCES[0],[activeExp]);
+  const exp = useMemo(() => EXPERIENCES.find(e => e.title === activeExp) || EXPERIENCES[0], [activeExp]);
 
-  useEffect(()=>{
-    timer.current = setInterval(()=>setSlide(s=>(s+1)%HERO_SLIDES.length),5200);
-    return ()=>clearInterval(timer.current);
-  },[]);
+  useEffect(() => {
+    timer.current = setInterval(() => setSlide(s => (s + 1) % HERO_SLIDES.length), 5200);
+    return () => clearInterval(timer.current);
+  }, []);
 
-  const goSlide = i => { clearInterval(timer.current); setSlide(i); timer.current = setInterval(()=>setSlide(s=>(s+1)%HERO_SLIDES.length),5200); };
+  const goSlide = i => { clearInterval(timer.current); setSlide(i); timer.current = setInterval(() => setSlide(s => (s + 1) % HERO_SLIDES.length), 5200); };
 
-  const open = (pkg="Custom Quote") => {
-    setLead(c=>({...c,packageName:pkg,message:pkg!=="Custom Quote"?`I want details for ${pkg}.`:c.message}));
+  const open = (pkg = "Custom Quote") => {
+    setLead(c => ({ ...c, packageName: pkg, message: pkg !== "Custom Quote" ? `I want details for ${pkg}.` : c.message }));
     setModal(true);
   };
 
   const doSearch = () => {
-    const msg = `Looking for ${search.tourType||"a trip"} to ${search.destination||"Dubai"}${search.date?` around ${search.date}`:""}. Guests: ${search.guests}.`;
-    setLead(c=>({...c,packageName:search.tourType||"Custom Quote",message:msg}));
+    const msg = `Looking for ${search.tourType || "a trip"} to ${search.destination || "Dubai"}${search.date ? ` around ${search.date}` : ""}. Guests: ${search.guests}.`;
+    setLead(c => ({ ...c, packageName: search.tourType || "Custom Quote", message: msg }));
     setModal(true);
   };
 
   return (<main>
     {/* HERO */}
     <section className="hero">
-      <div style={{position:"relative",width:"100%",height:"100%"}}>
-        {HERO_SLIDES.map((s,i)=>(
-          <div key={i} className={`hero-slide${i===slide?" active":""}`}>
-            <img src={s.img} alt="Hero"/>
-            <div className="hero-overlay"/>
+      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+        {HERO_SLIDES.map((s, i) => (
+          <div key={i} className={`hero-slide${i === slide ? " active" : ""}`}>
+            <img src={s.img} alt="Hero" />
+            <div className="hero-overlay" />
             <div className="hero-content">
               <div className="hero-badge">{s.badge}</div>
               <h1 className="hero-title">{s.title}</h1>
               <p className="hero-desc">{s.desc}</p>
               <div className="hero-btns">
-                <button className="btn btn-primary" onClick={()=>open()}>Explore Tours</button>
+                <button className="btn btn-primary" onClick={() => open()}>Explore Tours</button>
                 <a href="tel:+971313342532" className="btn btn-ghost">📞 Call Us</a>
               </div>
             </div>
@@ -1016,19 +1016,19 @@ function HomePage() {
         ))}
       </div>
       <div className="hero-dots">
-        {HERO_SLIDES.map((_,i)=><button key={i} className={`hero-dot${i===slide?" active":""}`} onClick={()=>goSlide(i)}/>)}
+        {HERO_SLIDES.map((_, i) => <button key={i} className={`hero-dot${i === slide ? " active" : ""}`} onClick={() => goSlide(i)} />)}
       </div>
-      <div className="hero-scroll"><div className="hero-scroll-line"/><span>Scroll</span></div>
+      <div className="hero-scroll"><div className="hero-scroll-line" /><span>Scroll</span></div>
     </section>
 
     {/* SEARCH */}
     <div className="searchbar-wrap">
       <div className="searchbar-inner">
         <div className="searchbar">
-          <div className="sf"><label>Destination</label><select value={search.destination} onChange={e=>setSearch({...search,destination:e.target.value})}><option value="">Select Destination</option>{["Dubai","Abu Dhabi","Sharjah","Doha","Riyadh","Muscat","Kuwait","Bahrain"].map(d=><option key={d}>{d}</option>)}</select></div>
-          <div className="sf"><label>Tour Type</label><select value={search.tourType} onChange={e=>setSearch({...search,tourType:e.target.value})}><option value="">All Activities</option>{["Desert Safari","Yacht Rental","City Tour","Holiday Package","Visa Service"].map(t=><option key={t}>{t}</option>)}</select></div>
-          <div className="sf"><label>Travel Date</label><input type="date" className="" value={search.date} onChange={e=>setSearch({...search,date:e.target.value})}/></div>
-          <div className="sf"><label>Guests</label><select value={search.guests} onChange={e=>setSearch({...search,guests:e.target.value})}>{["1 Person","2 Persons","3–5 Persons","6–10 Persons","10+ Persons"].map(g=><option key={g}>{g}</option>)}</select></div>
+          <div className="sf"><label>Destination</label><select value={search.destination} onChange={e => setSearch({ ...search, destination: e.target.value })}><option value="">Select Destination</option>{["Dubai", "Abu Dhabi", "Sharjah", "Doha", "Riyadh", "Muscat", "Kuwait", "Bahrain"].map(d => <option key={d}>{d}</option>)}</select></div>
+          <div className="sf"><label>Tour Type</label><select value={search.tourType} onChange={e => setSearch({ ...search, tourType: e.target.value })}><option value="">All Activities</option>{["Desert Safari", "Yacht Rental", "City Tour", "Holiday Package", "Visa Service"].map(t => <option key={t}>{t}</option>)}</select></div>
+          <div className="sf"><label>Travel Date</label><input type="date" className="" value={search.date} onChange={e => setSearch({ ...search, date: e.target.value })} /></div>
+          <div className="sf"><label>Guests</label><select value={search.guests} onChange={e => setSearch({ ...search, guests: e.target.value })}>{["1 Person", "2 Persons", "3–5 Persons", "6–10 Persons", "10+ Persons"].map(g => <option key={g}>{g}</option>)}</select></div>
           <button className="search-go" onClick={doSearch}>🔍 Search</button>
         </div>
       </div>
@@ -1037,7 +1037,7 @@ function HomePage() {
     {/* STATS */}
     <div className="statsbar">
       <div className="statsbar-inner">
-        {[["15,000+","Happy Travellers"],["4.9 / 5","Average Rating"],["50+","Destinations"],["5 Years","Of Excellence"],["10 min","Avg Reply Time"]].map(([n,l])=>(
+        {[["15,000+", "Happy Travellers"], ["4.9 / 5", "Average Rating"], ["50+", "Destinations"], ["5 Years", "Of Excellence"], ["10 min", "Avg Reply Time"]].map(([n, l]) => (
           <div className="stat" key={l}><div className="stat-num">{n}</div><div className="stat-label">{l}</div></div>
         ))}
       </div>
@@ -1048,17 +1048,17 @@ function HomePage() {
       <div className="container">
         <div className="about-grid">
           <div className="about-images anim-left">
-            <img className="about-img-main" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" alt="Dubai skyline"/>
-            <img className="about-img-secondary" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400&q=75" alt="Desert safari"/>
-            <div className="about-stamp"><div className="about-stamp-num">5★</div><div className="about-stamp-text">Certified<br/>Agency</div></div>
+            <img className="about-img-main" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" alt="Dubai skyline" />
+            <img className="about-img-secondary" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400&q=75" alt="Desert safari" />
+            <div className="about-stamp"><div className="about-stamp-num">5★</div><div className="about-stamp-text">Certified<br />Agency</div></div>
           </div>
           <div className="about-content anim-right d2">
             <span className="eyebrow">About Gulf Apex Consultant</span>
             <h2 className="about-title">Award Winning Travel Consultancy in Dubai</h2>
             <p className="about-text">Gulf Apex Consultant helps travellers understand the Gulf before they book — what to visit, how to move, which documents matter, and who to contact when plans change. From Gulf desert adventures to seamless visa services, every trip is built around you.</p>
             <div className="about-feats">
-              {["Expert Travel Consultants","Hassle-Free Visa Services","24/7 WhatsApp Support","Best Price Guarantee"].map(f=>(
-                <div className="about-feat" key={f}><div className="feat-dot"/><div className="feat-text">{f}</div></div>
+              {["Expert Travel Consultants", "Hassle-Free Visa Services", "24/7 WhatsApp Support", "Best Price Guarantee"].map(f => (
+                <div className="about-feat" key={f}><div className="feat-dot" /><div className="feat-text">{f}</div></div>
               ))}
             </div>
             <Link to="/about" className="btn btn-primary">Meet Our Experts →</Link>
@@ -1076,8 +1076,8 @@ function HomePage() {
           <p className="section-desc">From thrilling desert safaris to luxury yacht rentals — every Gulf experience covered.</p>
         </div>
         <div className="svc-grid">
-          {SERVICES.map((s,i)=>(
-            <div className={`svc-card anim-scale d${(i%6)+1}`} key={i} onClick={()=>open(s.name)}>
+          {SERVICES.map((s, i) => (
+            <div className={`svc-card anim-scale d${(i % 6) + 1}`} key={i} onClick={() => open(s.name)}>
               <span className="svc-emoji">{s.emoji}</span>
               <div className="svc-name">{s.name}</div>
             </div>
@@ -1096,19 +1096,19 @@ function HomePage() {
         </div>
         <div className="exp-board">
           <article className="exp-featured">
-            <img src={exp.img} alt={exp.title}/>
+            <img src={exp.img} alt={exp.title} />
             <div className="exp-featured-overlay">
               <span className="exp-tag">{exp.tag}</span>
               <h3>{exp.title}</h3>
               <p>{exp.summary}</p>
               <div className="exp-meta"><strong>{exp.price}</strong><span>📍 {exp.location}</span><span>⏱ {exp.duration}</span></div>
-              <button className="btn btn-primary" onClick={()=>open(exp.title)}>Book This Experience</button>
+              <button className="btn btn-primary" onClick={() => open(exp.title)}>Book This Experience</button>
             </div>
           </article>
           <div className="exp-list">
-            {EXPERIENCES.map(ex=>(
-              <button key={ex.title} className={`exp-row${ex.title===activeExp?" active":""}`} onClick={()=>setActiveExp(ex.title)} onMouseEnter={()=>setActiveExp(ex.title)} type="button">
-                <img src={ex.img} alt=""/>
+            {EXPERIENCES.map(ex => (
+              <button key={ex.title} className={`exp-row${ex.title === activeExp ? " active" : ""}`} onClick={() => setActiveExp(ex.title)} onMouseEnter={() => setActiveExp(ex.title)} type="button">
+                <img src={ex.img} alt="" />
                 <div className="exp-row-info"><em>{ex.tag}</em><strong>{ex.title}</strong><small>{ex.location} · {ex.duration}</small></div>
                 <b>{ex.price}</b>
               </button>
@@ -1127,10 +1127,10 @@ function HomePage() {
           <p className="section-desc">Choose from our most loved Gulf destinations and let us craft the perfect trip.</p>
         </div>
         <div className="dest-grid">
-          {DESTINATIONS.map(d=>(
-            <div key={d.name} className="dest-card" onClick={()=>nav(d.path)}>
-              <img src={d.img} alt={d.name} loading="lazy"/>
-              <div className="dest-overlay"/>
+          {DESTINATIONS.map(d => (
+            <div key={d.name} className="dest-card" onClick={() => nav(d.path)}>
+              <img src={d.img} alt={d.name} loading="lazy" onError={e => { e.target.src = "https://picsum.photos/seed/" + d.name.toLowerCase().replace(" ", "") + "/500/300" }} />
+              <div className="dest-overlay" />
               <div className="dest-name">{d.name}</div>
               <div className="dest-arrow">→</div>
             </div>
@@ -1140,7 +1140,7 @@ function HomePage() {
     </section>
 
     {/* ITINERARY */}
-    <section className="section" style={{background:"#fff8ef"}}>
+    <section className="section" style={{ background: "#fff8ef" }}>
       <div className="container">
         <div className="section-header">
           <span className="eyebrow">Ready-Made Starting Point</span>
@@ -1148,12 +1148,12 @@ function HomePage() {
           <p className="section-desc">Not sure where to start? Use our most popular itinerary as a base — we'll customise it for you.</p>
         </div>
         <div className="timeline">
-          {ITINERARY.map(([day,text])=>(
+          {ITINERARY.map(([day, text]) => (
             <div className="tl-item anim-left" key={day}><div className="tl-day">{day}</div><p className="tl-text">{text}</p></div>
           ))}
         </div>
-        <div style={{textAlign:"center",marginTop:36}}>
-          <button className="btn btn-primary" onClick={()=>open("Custom Quote")}>Customise This Itinerary</button>
+        <div style={{ textAlign: "center", marginTop: 36 }}>
+          <button className="btn btn-primary" onClick={() => open("Custom Quote")}>Customise This Itinerary</button>
         </div>
       </div>
     </section>
@@ -1164,21 +1164,21 @@ function HomePage() {
         <div className="why-grid">
           <div>
             <span className="eyebrow">Why Gulf Apex</span>
-            <h2 className="section-title" style={{textAlign:"left",marginBottom:32}}>Your Trusted Local <span>Tour Operator</span></h2>
+            <h2 className="section-title" style={{ textAlign: "left", marginBottom: 32 }}>Your Trusted Local <span>Tour Operator</span></h2>
             <div className="why-feats">
-              {WHY_ITEMS.map((w,i)=>(
-                <div className={`why-item anim-left d${i+1}`} key={w.title}>
+              {WHY_ITEMS.map((w, i) => (
+                <div className={`why-item anim-left d${i + 1}`} key={w.title}>
                   <div className="why-icon-wrap">{w.icon}</div>
                   <div className="why-text"><h4>{w.title}</h4><p>{w.desc}</p></div>
                 </div>
               ))}
             </div>
             <div className="chips">
-              {CHIPS.map(c=><span key={c} className="chip">{c}</span>)}
+              {CHIPS.map(c => <span key={c} className="chip">{c}</span>)}
             </div>
           </div>
           <div className="why-visual anim-right">
-            <img src="https://images.unsplash.com/photo-1544642899-f0d6e5f6ed6f?w=800&q=80" alt="Dubai"/>
+            <img src="https://images.unsplash.com/photo-1544642899-f0d6e5f6ed6f?w=800&q=80" alt="Dubai" />
             <div className="why-card">
               <div className="why-card-label">What our clients say</div>
               <div className="why-stars">★★★★★</div>
@@ -1199,8 +1199,8 @@ function HomePage() {
           <p className="section-desc">Over 15,000 happy customers — here's what some of them have to say.</p>
         </div>
         <div className="testi-grid">
-          {TESTIMONIALS.map((t,i)=>(
-            <div className={`testi-card anim-up d${i+1}`} key={t.name}>
+          {TESTIMONIALS.map((t, i) => (
+            <div className={`testi-card anim-up d${i + 1}`} key={t.name}>
               <div className="testi-quote">"</div>
               <div className="testi-stars">{t.stars}</div>
               <p className="testi-text">"{t.text}"</p>
@@ -1214,9 +1214,9 @@ function HomePage() {
       </div>
     </section>
 
-    <CTABand title="Ready to Start Your Gulf Adventure?" desc="Talk to our experts and let us design a trip that perfectly matches your dreams and budget." onEnquire={()=>open()}/>
+    <CTABand title="Ready to Start Your Gulf Adventure?" desc="Talk to our experts and let us design a trip that perfectly matches your dreams and budget." onEnquire={() => open()} />
 
-    {modal && <Modal lead={lead} setLead={setLead} onClose={()=>setModal(false)}/>}
+    {modal && <Modal lead={lead} setLead={setLead} onClose={() => setModal(false)} />}
   </main>);
 }
 
@@ -1225,35 +1225,35 @@ function HomePage() {
 ═══════════════════════════════════════════════════════════════ */
 const EXPERTS = [
   {
-    name:"Ravi Kapoor",
-    role:"Head of Visa Services",
-    img:"https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
-    desc:"10+ years of UAE visa expertise. Ravi handles all visa applications, document verification and compliance for clients from India and across South Asia.",
-    badge:"Visa Expert"
+    name: "Ravi Kapoor",
+    role: "Head of Visa Services",
+    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+    desc: "10+ years of UAE visa expertise. Ravi handles all visa applications, document verification and compliance for clients from India and across South Asia.",
+    badge: "Visa Expert"
   },
   {
-    name:"Sunita Menon",
-    role:"Senior Travel Consultant",
-    img:"https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
-    desc:"Specialises in crafting bespoke itineraries for families, honeymooners and corporate groups travelling to the Gulf region.",
-    badge:"Travel Specialist"
+    name: "Sunita Menon",
+    role: "Senior Travel Consultant",
+    img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
+    desc: "Specialises in crafting bespoke itineraries for families, honeymooners and corporate groups travelling to the Gulf region.",
+    badge: "Travel Specialist"
   },
   {
-    name:"Khalid Al Rashid",
-    role:"Destination Expert — Gulf",
-    img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-    desc:"Born and raised in Dubai, Khalid has insider knowledge of every corner of the UAE, Qatar, Oman, and Saudi Arabia.",
-    badge:"Local Expert"
+    name: "Khalid Al Rashid",
+    role: "Destination Expert — Gulf",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    desc: "Born and raised in Dubai, Khalid has insider knowledge of every corner of the UAE, Qatar, Oman, and Saudi Arabia.",
+    badge: "Local Expert"
   },
 ];
 
 function AboutPage() {
   return (<main>
     <section className="about-page-hero">
-      <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1800&q=82" alt="Dubai skyline"/>
-      <div className="about-hero-overlay"/>
+      <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1800&q=82" alt="Dubai skyline" />
+      <div className="about-hero-overlay" />
       <div className="about-hero-content">
-        <span className="eyebrow" style={{color:"#F9C96E"}}>About Gulf Apex Consultant</span>
+        <span className="eyebrow" style={{ color: "#F9C96E" }}>About Gulf Apex Consultant</span>
         <h1>Travel &amp; visa consultancy built for seamless Gulf experiences.</h1>
         <p>Gulf Apex Consultant helps travellers plan, book and execute unforgettable Gulf journeys — from visa guidance to on-ground support.</p>
       </div>
@@ -1286,10 +1286,10 @@ function AboutPage() {
           <p className="section-desc">Our team brings together deep Gulf expertise, visa knowledge and travel passion — all in one place.</p>
         </div>
         <div className="experts-grid">
-          {EXPERTS.map((ex,i)=>(
-            <div className={`expert-card anim-up d${i+1}`} key={ex.name}>
+          {EXPERTS.map((ex, i) => (
+            <div className={`expert-card anim-up d${i + 1}`} key={ex.name}>
               <div className="expert-img-wrap">
-                <img src={ex.img} alt={ex.name} className="expert-img"/>
+                <img src={ex.img} alt={ex.name} className="expert-img" />
                 <div className="expert-badge-pill">{ex.badge}</div>
               </div>
               <div className="expert-body">
@@ -1325,8 +1325,8 @@ function AboutPage() {
           <p>Our vision is to become a reliable Dubai-based consultancy where travellers can handle visa questions, tour planning and on-ground support without jumping between disconnected providers.</p>
         </div>
         <div className="about-values">
-          {ABOUT_VALS.map(([t,p],i)=>(
-            <div className={`about-val anim-up d${i+1}`} key={t}><h3>{t}</h3><p>{p}</p></div>
+          {ABOUT_VALS.map(([t, p], i) => (
+            <div className={`about-val anim-up d${i + 1}`} key={t}><h3>{t}</h3><p>{p}</p></div>
           ))}
         </div>
       </div>
@@ -1339,12 +1339,12 @@ function AboutPage() {
           <h2 className="section-title">What You <span>Can Expect</span></h2>
         </div>
         <div className="about-hlights">
-          {ABOUT_HLS.map(h=><div className="about-hl" key={h}>{h}</div>)}
+          {ABOUT_HLS.map(h => <div className="about-hl" key={h}>{h}</div>)}
         </div>
       </div>
     </section>
 
-    <CTABand title="Ready to Plan Your Dubai Trip?" desc="Speak with our experts for a personalised itinerary, visa guidance and on-ground support." onEnquire={()=>window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I'd like to plan a trip.")}`, "_blank", "noopener,noreferrer")}/>
+    <CTABand title="Ready to Plan Your Dubai Trip?" desc="Speak with our experts for a personalised itinerary, visa guidance and on-ground support." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I'd like to plan a trip.")}`, "_blank", "noopener,noreferrer")} />
   </main>);
 }
 
@@ -1352,32 +1352,32 @@ function AboutPage() {
    PAGE: CONTACT
 ═══════════════════════════════════════════════════════════════ */
 function ContactPage() {
-  const [fd, setFd] = useState({name:"",email:"",phone:"",service:"",budget:"Flexible",dateFrom:"",dateTo:"",guests:"2 Persons",message:""});
+  const [fd, setFd] = useState({ name: "", email: "", phone: "", service: "", budget: "Flexible", dateFrom: "", dateTo: "", guests: "2 Persons", message: "" });
   const [status, setStatus] = useState("");
   const [busy, setBusy] = useState(false);
-  const s = (f,v) => setFd(p=>({...p,[f]:v}));
+  const s = (f, v) => setFd(p => ({ ...p, [f]: v }));
 
   const submit = e => {
     e.preventDefault();
-    if (!fd.name||!fd.phone){setStatus("Please fill in your name and phone number.");return;}
+    if (!fd.name || !fd.phone) { setStatus("Please fill in your name and phone number."); return; }
     setBusy(true);
-    const msg = `Hi Gulf Apex! I want to enquire about ${fd.service||"Dubai trips"}.\nName: ${fd.name}\nPhone: ${fd.phone}\nEmail: ${fd.email||"N/A"}\nDate: ${fd.dateFrom||"Flexible"} to ${fd.dateTo||"Flexible"}\nGuests: ${fd.guests}\nBudget: ${fd.budget}\nMessage: ${fd.message||"N/A"}`;
-    setTimeout(()=>{
+    const msg = `Hi Gulf Apex! I want to enquire about ${fd.service || "Dubai trips"}.\nName: ${fd.name}\nPhone: ${fd.phone}\nEmail: ${fd.email || "N/A"}\nDate: ${fd.dateFrom || "Flexible"} to ${fd.dateTo || "Flexible"}\nGuests: ${fd.guests}\nBudget: ${fd.budget}\nMessage: ${fd.message || "N/A"}`;
+    setTimeout(() => {
       saveToFirebase("contact_enquiries", { ...fd, source: "contact_page" });
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
       setStatus("Opening WhatsApp…");
       setBusy(false);
-      setTimeout(()=>setStatus(""),3200);
-    },380);
+      setTimeout(() => setStatus(""), 3200);
+    }, 380);
   };
 
   return (<div>
     <section className="contact-hero">
-      <div className="contact-hero-overlay"/>
+      <div className="contact-hero-overlay" />
       <div className="contact-hero-content">
-        <span className="eyebrow" style={{color:"#F9C96E"}}>Get in Touch</span>
+        <span className="eyebrow" style={{ color: "#F9C96E" }}>Get in Touch</span>
         <h1>Let's Plan Your Next Journey</h1>
-        <p style={{fontSize:17,opacity:.88,lineHeight:1.75,maxWidth:560}}>Reach out to our travel advisors for a custom itinerary, visa support or instant booking assistance.</p>
+        <p style={{ fontSize: 17, opacity: .88, lineHeight: 1.75, maxWidth: 560 }}>Reach out to our travel advisors for a custom itinerary, visa support or instant booking assistance.</p>
       </div>
     </section>
 
@@ -1387,16 +1387,16 @@ function ContactPage() {
           <div className="contact-info anim-left">
             <h2>Contact Information</h2>
             <p className="contact-intro">Gulf Apex Consultant is ready to help you book the perfect Gulf escape. Fill out the form and we'll get back to you via WhatsApp or phone.</p>
-            {[["📍","Office Address","Office 301, Business Bay, Dubai, UAE"],["📞","Phone",<a href="tel:+971313342532">+971 313 342 532</a>],["✉️","Email",<a href="mailto:info@gulfapexconsultant.com">info@gulfapexconsultant.com</a>],["🕒","Working Hours","Mon–Sat: 9 AM – 8 PM\nSunday: 10 AM – 6 PM"],["🏢","Company","Gulf Apex Consultant L.L.C.\nDubai-based Travel & Visa Experts"]].map(([icon,title,val],i)=>(
+            {[["📍", "Office Address", "Office 301, Business Bay, Dubai, UAE"], ["📞", "Phone", <a href="tel:+971313342532">+971 313 342 532</a>], ["✉️", "Email", <a href="mailto:info@gulfapexconsultant.com">info@gulfapexconsultant.com</a>], ["🕒", "Working Hours", "Mon–Sat: 9 AM – 8 PM\nSunday: 10 AM – 6 PM"], ["🏢", "Company", "Gulf Apex Consultant L.L.C.\nDubai-based Travel & Visa Experts"]].map(([icon, title, val], i) => (
               <div className="ci-item" key={i}>
                 <div className="ci-icon">{icon}</div>
-                <div><div className="ci-title">{title}</div><div className="ci-text" style={{whiteSpace:"pre-line"}}>{val}</div></div>
+                <div><div className="ci-title">{title}</div><div className="ci-text" style={{ whiteSpace: "pre-line" }}>{val}</div></div>
               </div>
             ))}
             <div className="soc-row">
               <h4>Follow Us</h4>
               <div className="soc-icons">
-                {[["f","Facebook"],["ig","Instagram"],["wa","WhatsApp"],["in","LinkedIn"]].map(([l,a])=><a key={l} href="#" className="soc-icon" aria-label={a} style={l==="wa"?{background:"#25D366",borderColor:"#25D366",color:"#fff"}:l==="in"?{background:"#0077B5",borderColor:"#0077B5",color:"#fff"}:{}}>{l}</a>)}
+                {[["f", "Facebook"], ["ig", "Instagram"], ["wa", "WhatsApp"], ["in", "LinkedIn"]].map(([l, a]) => <a key={l} href="#" className="soc-icon" aria-label={a} style={l === "wa" ? { background: "#25D366", borderColor: "#25D366", color: "#fff" } : l === "in" ? { background: "#0077B5", borderColor: "#0077B5", color: "#fff" } : {}}>{l}</a>)}
               </div>
             </div>
           </div>
@@ -1405,22 +1405,22 @@ function ContactPage() {
             <h2>Send an Enquiry</h2>
             <form className="fgrid" onSubmit={submit}>
               <div className="frow">
-                <label className="flabel">Full Name *<input required className="finput" placeholder="Your name" value={fd.name} onChange={e=>s("name",e.target.value)}/></label>
-                <label className="flabel">Phone Number *<input required className="finput" type="tel" placeholder="+971..." value={fd.phone} onChange={e=>s("phone",e.target.value)}/></label>
+                <label className="flabel">Full Name *<input required className="finput" placeholder="Your name" value={fd.name} onChange={e => s("name", e.target.value)} /></label>
+                <label className="flabel">Phone Number *<input required className="finput" type="tel" placeholder="+971..." value={fd.phone} onChange={e => s("phone", e.target.value)} /></label>
               </div>
-              <label className="flabel">Email Address<input className="finput" type="email" placeholder="you@email.com" value={fd.email} onChange={e=>s("email",e.target.value)}/></label>
-              <label className="flabel">Service Interest<select className="finput" value={fd.service} onChange={e=>s("service",e.target.value)}><option value="">Select a service</option>{CONTACT_SVCS.map(sv=><option key={sv}>{sv}</option>)}</select></label>
+              <label className="flabel">Email Address<input className="finput" type="email" placeholder="you@email.com" value={fd.email} onChange={e => s("email", e.target.value)} /></label>
+              <label className="flabel">Service Interest<select className="finput" value={fd.service} onChange={e => s("service", e.target.value)}><option value="">Select a service</option>{CONTACT_SVCS.map(sv => <option key={sv}>{sv}</option>)}</select></label>
               <div className="frow">
-                <label className="flabel">From Date<input className="finput" type="date" value={fd.dateFrom} onChange={e=>s("dateFrom",e.target.value)}/></label>
-                <label className="flabel">To Date<input className="finput" type="date" value={fd.dateTo} onChange={e=>s("dateTo",e.target.value)}/></label>
+                <label className="flabel">From Date<input className="finput" type="date" value={fd.dateFrom} onChange={e => s("dateFrom", e.target.value)} /></label>
+                <label className="flabel">To Date<input className="finput" type="date" value={fd.dateTo} onChange={e => s("dateTo", e.target.value)} /></label>
               </div>
               <div className="frow">
-                <label className="flabel">Number of Guests<select className="finput" value={fd.guests} onChange={e=>s("guests",e.target.value)}>{["1 Person","2 Persons","3–5 Persons","6–10 Persons","10+ Persons"].map(g=><option key={g}>{g}</option>)}</select></label>
-                <label className="flabel">Budget Range<select className="finput" value={fd.budget} onChange={e=>s("budget",e.target.value)}>{BUDGET_RANGES.map(b=><option key={b}>{b}</option>)}</select></label>
+                <label className="flabel">Number of Guests<select className="finput" value={fd.guests} onChange={e => s("guests", e.target.value)}>{["1 Person", "2 Persons", "3–5 Persons", "6–10 Persons", "10+ Persons"].map(g => <option key={g}>{g}</option>)}</select></label>
+                <label className="flabel">Budget Range<select className="finput" value={fd.budget} onChange={e => s("budget", e.target.value)}>{BUDGET_RANGES.map(b => <option key={b}>{b}</option>)}</select></label>
               </div>
-              <label className="flabel">Message<textarea className="finput" rows="4" placeholder="Tell us what you'd like to plan, special requirements, preferred activities…" value={fd.message} onChange={e=>s("message",e.target.value)}/></label>
-              {status&&<p className="form-status-ok">{status}</p>}
-              <button className="btn btn-primary full" type="submit" disabled={busy}>{busy?"Opening WhatsApp…":"📲 Submit Enquiry via WhatsApp"}</button>
+              <label className="flabel">Message<textarea className="finput" rows="4" placeholder="Tell us what you'd like to plan, special requirements, preferred activities…" value={fd.message} onChange={e => s("message", e.target.value)} /></label>
+              {status && <p className="form-status-ok">{status}</p>}
+              <button className="btn btn-primary full" type="submit" disabled={busy}>{busy ? "Opening WhatsApp…" : "📲 Submit Enquiry via WhatsApp"}</button>
               <p className="form-note">* Required fields. By submitting, you agree to be contacted via WhatsApp or phone.</p>
             </form>
           </div>
@@ -1436,29 +1436,29 @@ function ContactPage() {
           <p className="section-desc">Located in the heart of Dubai's business district, easily accessible from all major areas.</p>
         </div>
         <div className="map-wrap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5!2d55.2708!3d25.1984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sBusiness+Bay%2C+Dubai!2sAE!5e0!3m2!1sen!2sae!4v1655903382!5m2!1sen!2sae" width="100%" height="430" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Office Location"/>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5!2d55.2708!3d25.1984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sBusiness+Bay%2C+Dubai!2sAE!5e0!3m2!1sen!2sae!4v1655903382!5m2!1sen!2sae" width="100%" height="430" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Office Location" />
         </div>
       </div>
     </section>
 
-    <CTABand title="Prefer to Call Directly?" desc="Speak with our team for instant assistance with your Dubai travel plans." onEnquire={()=>window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to enquire.")}`, "_blank", "noopener,noreferrer")}/>
+    <CTABand title="Prefer to Call Directly?" desc="Speak with our team for instant assistance with your Dubai travel plans." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to enquire.")}`, "_blank", "noopener,noreferrer")} />
   </div>);
 }
 
 /* ═══════════════════════════════════════════════════════════════
    PAGE: DESTINATION (generic)
 ═══════════════════════════════════════════════════════════════ */
-function DestPage({name,country,flag,img,desc,tours}) {
+function DestPage({ name, country, flag, img, desc, tours }) {
   const [modal, setModal] = useState(false);
-  const [lead, setLead] = useState({...INIT_LEAD, packageName:`${name} Tour`, message:`I want to enquire about a ${name} tour.`});
-  const open = pkg => { setLead(l=>({...l,packageName:pkg,message:`I want details for ${pkg}.`})); setModal(true); };
+  const [lead, setLead] = useState({ ...INIT_LEAD, packageName: `${name} Tour`, message: `I want to enquire about a ${name} tour.` });
+  const open = pkg => { setLead(l => ({ ...l, packageName: pkg, message: `I want details for ${pkg}.` })); setModal(true); };
 
   return (<main>
     <section className="dest-hero-page">
-      <img src={img} alt={name}/>
-      <div className="dest-hero-overlay"/>
+      <img src={img} alt={name} />
+      <div className="dest-hero-overlay" />
       <div className="dest-hero-content">
-        <span className="eyebrow" style={{color:"#F9C96E"}}>{flag} {country}</span>
+        <span className="eyebrow" style={{ color: "#F9C96E" }}>{flag} {country}</span>
         <h1>{name}</h1>
         <p>{desc}</p>
       </div>
@@ -1472,16 +1472,16 @@ function DestPage({name,country,flag,img,desc,tours}) {
           <p className="section-desc">Handpicked experiences to make the most of your time in {name}.</p>
         </div>
         <div className="tours-grid">
-          {tours.map((t,i)=>(
-            <div className={`tour-card anim-up d${(i%3)+1}`} key={i}>
-              <img className="tour-card-img" src={t.img} alt={t.name}/>
+          {tours.map((t, i) => (
+            <div className={`tour-card anim-up d${(i % 3) + 1}`} key={i}>
+              <img className="tour-card-img" src={t.img} alt={t.name} />
               <div className="tour-card-body">
                 <div className="tour-tag">{t.tag}</div>
                 <div className="tour-name">{t.name}</div>
                 <div className="tour-meta">⏱ {t.duration} &nbsp;·&nbsp; 📍 {t.location}</div>
                 <div className="tour-footer">
                   <div><div className="tour-from">From</div><div className="tour-price">{t.price}</div></div>
-                  <button className="btn btn-primary" style={{padding:"9px 18px",fontSize:13}} onClick={()=>open(t.name)}>Enquire</button>
+                  <button className="btn btn-primary" style={{ padding: "9px 18px", fontSize: 13 }} onClick={() => open(t.name)}>Enquire</button>
                 </div>
               </div>
             </div>
@@ -1490,8 +1490,8 @@ function DestPage({name,country,flag,img,desc,tours}) {
       </div>
     </section>
 
-    <CTABand title={`Plan Your ${name} Trip Today`} desc="Let our Gulf experts craft the perfect personalised itinerary for your adventure." onEnquire={()=>setModal(true)}/>
-    {modal && <Modal lead={lead} setLead={setLead} onClose={()=>setModal(false)}/>}
+    <CTABand title={`Plan Your ${name} Trip Today`} desc="Let our Gulf experts craft the perfect personalised itinerary for your adventure." onEnquire={() => setModal(true)} />
+    {modal && <Modal lead={lead} setLead={setLead} onClose={() => setModal(false)} />}
   </main>);
 }
 
@@ -1499,12 +1499,12 @@ function DestPage({name,country,flag,img,desc,tours}) {
    PAGE: VISA CONSULTATION
 ═══════════════════════════════════════════════════════════════ */
 const VISA_TYPES = [
-  { icon:"🗓️", name:"30-Day Tourist Visa", duration:"30 Days", desc:"Perfect for short holidays and business visits. Single entry, extendable to 60 days.", price:"₹4,500", note:"Approx. charges, service fee not included" },
-  { icon:"📅", name:"60-Day Tourist Visa", duration:"60 Days", desc:"Best for extended stays, family visits or long trips across the UAE.", price:"₹7,000", note:"Approx. charges, service fee not included" },
-  { icon:"🔁", name:"Multi-Entry Visa (1 Year)", duration:"180 Days / Year", desc:"Ideal for frequent travellers. Multiple entries, stay up to 90 days at a time.", price:"₹12,000", note:"Approx. charges, service fee not included" },
-  { icon:"💼", name:"Business Visa", duration:"30–60 Days", desc:"For business meetings, conferences, exhibitions. Requires employer letter.", price:"₹6,000", note:"Approx. charges, service fee not included" },
-  { icon:"👨‍👩‍👧", name:"Family / Dependent Visa", duration:"30–90 Days", desc:"Travel with family — spouse, children. Group pricing available.", price:"₹3,800/person", note:"Min. 2 persons. Approx. charges." },
-  { icon:"🏫", name:"Transit Visa (96 Hours)", duration:"96 Hours", desc:"Short layover visa for connecting flights via UAE. Express processing.", price:"₹1,800", note:"For transit through UAE airports" },
+  { icon: "🗓️", name: "30-Day Tourist Visa", duration: "30 Days", desc: "Perfect for short holidays and business visits. Single entry, extendable to 60 days.", price: "₹4,500", note: "Approx. charges, service fee not included" },
+  { icon: "📅", name: "60-Day Tourist Visa", duration: "60 Days", desc: "Best for extended stays, family visits or long trips across the UAE.", price: "₹7,000", note: "Approx. charges, service fee not included" },
+  { icon: "🔁", name: "Multi-Entry Visa (1 Year)", duration: "180 Days / Year", desc: "Ideal for frequent travellers. Multiple entries, stay up to 90 days at a time.", price: "₹12,000", note: "Approx. charges, service fee not included" },
+  { icon: "💼", name: "Business Visa", duration: "30–60 Days", desc: "For business meetings, conferences, exhibitions. Requires employer letter.", price: "₹6,000", note: "Approx. charges, service fee not included" },
+  { icon: "👨‍👩‍👧", name: "Family / Dependent Visa", duration: "30–90 Days", desc: "Travel with family — spouse, children. Group pricing available.", price: "₹3,800/person", note: "Min. 2 persons. Approx. charges." },
+  { icon: "🏫", name: "Transit Visa (96 Hours)", duration: "96 Hours", desc: "Short layover visa for connecting flights via UAE. Express processing.", price: "₹1,800", note: "For transit through UAE airports" },
 ];
 
 const VISA_CHARGES_TABLE = [
@@ -1518,36 +1518,36 @@ const VISA_CHARGES_TABLE = [
 ];
 
 const VISA_DOCS = [
-  { icon:"📷", text:"Passport size photo (white background, recent)" },
-  { icon:"📘", text:"Passport copy (min. 6 months validity)" },
-  { icon:"✈️", text:"Confirmed return flight ticket" },
-  { icon:"🏨", text:"Hotel booking / accommodation proof" },
-  { icon:"💳", text:"Bank statement (last 3 months)" },
-  { icon:"📋", text:"Application form (filled & signed)" },
-  { icon:"📄", text:"Travel insurance (recommended)" },
-  { icon:"💼", text:"Employment letter / business proof (for business visa)" },
+  { icon: "📷", text: "Passport size photo (white background, recent)" },
+  { icon: "📘", text: "Passport copy (min. 6 months validity)" },
+  { icon: "✈️", text: "Confirmed return flight ticket" },
+  { icon: "🏨", text: "Hotel booking / accommodation proof" },
+  { icon: "💳", text: "Bank statement (last 3 months)" },
+  { icon: "📋", text: "Application form (filled & signed)" },
+  { icon: "📄", text: "Travel insurance (recommended)" },
+  { icon: "💼", text: "Employment letter / business proof (for business visa)" },
 ];
 
 const VISA_STEPS = [
-  { num:"01", title:"Share Documents", desc:"Send us scanned copies of your passport, photo and travel details via WhatsApp." },
-  { num:"02", title:"We Review & Advise", desc:"Our visa experts check eligibility, validity and recommend the right visa type." },
-  { num:"03", title:"Application Submitted", desc:"We submit your application to the UAE immigration authority on your behalf." },
-  { num:"04", title:"Visa Approved", desc:"Typically within 5–7 working days. Express options available at extra cost." },
-  { num:"05", title:"Receive e-Visa", desc:"Your visa is emailed directly to you — ready to travel!" },
+  { num: "01", title: "Share Documents", desc: "Send us scanned copies of your passport, photo and travel details via WhatsApp." },
+  { num: "02", title: "We Review & Advise", desc: "Our visa experts check eligibility, validity and recommend the right visa type." },
+  { num: "03", title: "Application Submitted", desc: "We submit your application to the UAE immigration authority on your behalf." },
+  { num: "04", title: "Visa Approved", desc: "Typically within 5–7 working days. Express options available at extra cost." },
+  { num: "05", title: "Receive e-Visa", desc: "Your visa is emailed directly to you — ready to travel!" },
 ];
 
 function VisaConsultationPage() {
-  const [form, setForm] = useState({ name:"", phone:"", email:"", visaType:"30-Day Tourist Visa", travelDate:"", passengers:"1 Person", message:"" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", visaType: "30-Day Tourist Visa", travelDate: "", passengers: "1 Person", message: "" });
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState("");
-  const s = (f,v) => setForm(p=>({...p,[f]:v}));
+  const s = (f, v) => setForm(p => ({ ...p, [f]: v }));
 
   const submit = e => {
     e.preventDefault();
     if (!form.name || !form.phone) { setStatus("Please enter your name and phone."); return; }
     setBusy(true);
-    const msg = `Hi Gulf Apex! I need UAE Visa Consultation.\nVisa Type: ${form.visaType}\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email||"N/A"}\nTravel Date: ${form.travelDate||"Flexible"}\nPassengers: ${form.passengers}\nMessage: ${form.message||"N/A"}`;
-    setTimeout(()=>{
+    const msg = `Hi Gulf Apex! I need UAE Visa Consultation.\nVisa Type: ${form.visaType}\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email || "N/A"}\nTravel Date: ${form.travelDate || "Flexible"}\nPassengers: ${form.passengers}\nMessage: ${form.message || "N/A"}`;
+    setTimeout(() => {
       saveToFirebase("visa_enquiries", { ...form, source: "visa_page" });
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
       setStatus("✅ Opening WhatsApp — our team will assist you shortly!");
@@ -1557,11 +1557,11 @@ function VisaConsultationPage() {
 
   return (<main>
     <section className="visa-hero">
-      <div className="visa-hero-overlay"/>
+      <div className="visa-hero-overlay" />
       <div className="visa-hero-content">
-        <span className="eyebrow" style={{color:"#F9C96E"}}>🛂 UAE Visa Services</span>
+        <span className="eyebrow" style={{ color: "#F9C96E" }}>🛂 UAE Visa Services</span>
         <h1>India to UAE Visa Consultation — Fast, Reliable &amp; Hassle-Free</h1>
-        <p style={{fontSize:17,opacity:.88,lineHeight:1.75,maxWidth:580}}>Expert UAE visa assistance for Indian passport holders. Tourist, business, multi-entry and family visas — all processed from Dubai by our certified team.</p>
+        <p style={{ fontSize: 17, opacity: .88, lineHeight: 1.75, maxWidth: 580 }}>Expert UAE visa assistance for Indian passport holders. Tourist, business, multi-entry and family visas — all processed from Dubai by our certified team.</p>
       </div>
     </section>
 
@@ -1574,8 +1574,8 @@ function VisaConsultationPage() {
           <p className="section-desc">We process all major UAE visa categories for Indian passport holders. Prices are indicative — contact us for exact current charges.</p>
         </div>
         <div className="visa-types-grid">
-          {VISA_TYPES.map((v,i)=>(
-            <div className={`visa-type-card anim-up d${(i%3)+1}`} key={v.name}>
+          {VISA_TYPES.map((v, i) => (
+            <div className={`visa-type-card anim-up d${(i % 3) + 1}`} key={v.name}>
               <div className="visa-type-icon">{v.icon}</div>
               <div className="visa-type-name">{v.name}</div>
               <div className="visa-type-duration">⏱ {v.duration}</div>
@@ -1596,7 +1596,7 @@ function VisaConsultationPage() {
           <h2 className="section-title">Visa Charges — <span>India to UAE</span></h2>
           <p className="section-desc">Below are approximate charges for UAE visas from India (in INR). Actual charges may vary based on current immigration fees. Enquire for exact quote.</p>
         </div>
-        <div style={{overflowX:"auto",borderRadius:14,boxShadow:"0 8px 32px rgba(0,0,0,.09)"}}>
+        <div style={{ overflowX: "auto", borderRadius: 14, boxShadow: "0 8px 32px rgba(0,0,0,.09)" }}>
           <table className="charges-table">
             <thead>
               <tr>
@@ -1607,7 +1607,7 @@ function VisaConsultationPage() {
               </tr>
             </thead>
             <tbody>
-              {VISA_CHARGES_TABLE.map(([type,stay,price,time])=>(
+              {VISA_CHARGES_TABLE.map(([type, stay, price, time]) => (
                 <tr key={type}>
                   <td><strong>{type}</strong></td>
                   <td>{stay}</td>
@@ -1618,18 +1618,18 @@ function VisaConsultationPage() {
             </tbody>
           </table>
         </div>
-        <div className="disclaimer-note" style={{marginTop:20}}>
+        <div className="disclaimer-note" style={{ marginTop: 20 }}>
           <strong>⚠️ Important:</strong> Charges listed are approximate and subject to change as per UAE immigration authority. Our service fee is additional. <strong>For exact, up-to-date charges — enquire via WhatsApp below.</strong>
         </div>
 
         {/* WhatsApp CTA for charges */}
-        <div className="visa-enquire-banner" style={{marginTop:32}}>
+        <div className="visa-enquire-banner" style={{ marginTop: 32 }}>
           <div>
             <h3>Get Exact Visa Charges in Minutes</h3>
             <p>Send us a WhatsApp message with your passport details and travel dates — we'll send you a full cost breakdown instantly.</p>
           </div>
-          <button className="btn-wa" onClick={()=>window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to know the exact UAE visa charges for Indian passport.")}`, "_blank", "noopener,noreferrer")}>
-            <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <button className="btn-wa" onClick={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to know the exact UAE visa charges for Indian passport.")}`, "_blank", "noopener,noreferrer")}>
+            <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
             Enquire on WhatsApp
           </button>
         </div>
@@ -1645,8 +1645,8 @@ function VisaConsultationPage() {
           <p className="section-desc">Make sure you have these ready before applying. Our team will guide you through every step.</p>
         </div>
         <div className="visa-docs-grid">
-          {VISA_DOCS.map((d,i)=>(
-            <div className={`visa-doc-item anim-up d${(i%4)+1}`} key={d.text}>
+          {VISA_DOCS.map((d, i) => (
+            <div className={`visa-doc-item anim-up d${(i % 4) + 1}`} key={d.text}>
               <span className="visa-doc-icon">{d.icon}</span>
               <span className="visa-doc-text">{d.text}</span>
             </div>
@@ -1664,8 +1664,8 @@ function VisaConsultationPage() {
           <p className="section-desc">Simple, transparent and fast — from document submission to e-visa delivery in your inbox.</p>
         </div>
         <div className="visa-process-steps">
-          {VISA_STEPS.map((step,i)=>(
-            <div className={`visa-step anim-up d${(i%5)+1}`} key={step.num}>
+          {VISA_STEPS.map((step, i) => (
+            <div className={`visa-step anim-up d${(i % 5) + 1}`} key={step.num}>
               <div className="visa-step-num">{step.num}</div>
               <div className="visa-step-title">{step.title}</div>
               <p className="visa-step-desc">{step.desc}</p>
@@ -1683,23 +1683,23 @@ function VisaConsultationPage() {
           <h2 className="section-title">Apply for Your <span>UAE Visa</span></h2>
           <p className="section-desc">Fill in your details and our visa team will contact you within 2 hours on WhatsApp.</p>
         </div>
-        <div style={{maxWidth:660,margin:"0 auto"}}>
+        <div style={{ maxWidth: 660, margin: "0 auto" }}>
           <div className="form-card">
             <form className="fgrid" onSubmit={submit}>
               <div className="frow">
-                <label className="flabel">Full Name *<input required className="finput" placeholder="Your name" value={form.name} onChange={e=>s("name",e.target.value)}/></label>
-                <label className="flabel">Phone / WhatsApp *<input required className="finput" type="tel" placeholder="+91 98765..." value={form.phone} onChange={e=>s("phone",e.target.value)}/></label>
+                <label className="flabel">Full Name *<input required className="finput" placeholder="Your name" value={form.name} onChange={e => s("name", e.target.value)} /></label>
+                <label className="flabel">Phone / WhatsApp *<input required className="finput" type="tel" placeholder="+91 98765..." value={form.phone} onChange={e => s("phone", e.target.value)} /></label>
               </div>
-              <label className="flabel">Email Address<input className="finput" type="email" placeholder="you@email.com" value={form.email} onChange={e=>s("email",e.target.value)}/></label>
-              <label className="flabel">Visa Type Required<select className="finput" value={form.visaType} onChange={e=>s("visaType",e.target.value)}>{VISA_TYPES.map(v=><option key={v.name}>{v.name}</option>)}</select></label>
+              <label className="flabel">Email Address<input className="finput" type="email" placeholder="you@email.com" value={form.email} onChange={e => s("email", e.target.value)} /></label>
+              <label className="flabel">Visa Type Required<select className="finput" value={form.visaType} onChange={e => s("visaType", e.target.value)}>{VISA_TYPES.map(v => <option key={v.name}>{v.name}</option>)}</select></label>
               <div className="frow">
-                <label className="flabel">Travel Date<input className="finput" type="date" value={form.travelDate} onChange={e=>s("travelDate",e.target.value)}/></label>
-                <label className="flabel">No. of Passengers<select className="finput" value={form.passengers} onChange={e=>s("passengers",e.target.value)}>{["1 Person","2 Persons","3–5 Persons","6–10 Persons","10+ Persons"].map(g=><option key={g}>{g}</option>)}</select></label>
+                <label className="flabel">Travel Date<input className="finput" type="date" value={form.travelDate} onChange={e => s("travelDate", e.target.value)} /></label>
+                <label className="flabel">No. of Passengers<select className="finput" value={form.passengers} onChange={e => s("passengers", e.target.value)}>{["1 Person", "2 Persons", "3–5 Persons", "6–10 Persons", "10+ Persons"].map(g => <option key={g}>{g}</option>)}</select></label>
               </div>
-              <label className="flabel">Message / Special Requirements<textarea className="finput" rows="3" placeholder="Any questions about the visa process, document queries…" value={form.message} onChange={e=>s("message",e.target.value)}/></label>
+              <label className="flabel">Message / Special Requirements<textarea className="finput" rows="3" placeholder="Any questions about the visa process, document queries…" value={form.message} onChange={e => s("message", e.target.value)} /></label>
               {status && <p className="form-status-ok">{status}</p>}
-              <button className="btn-wa" type="submit" disabled={busy} style={{justifyContent:"center",width:"100%",fontSize:16,padding:"14px 28px"}}>
-                <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <button className="btn-wa" type="submit" disabled={busy} style={{ justifyContent: "center", width: "100%", fontSize: 16, padding: "14px 28px" }}>
+                <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
                 {busy ? "Opening WhatsApp…" : "📲 Submit Visa Enquiry via WhatsApp"}
               </button>
               <p className="form-note">* Required. You'll receive a response within 2 hours on WhatsApp.</p>
@@ -1709,7 +1709,7 @@ function VisaConsultationPage() {
       </div>
     </section>
 
-    <CTABand title="Need Urgent Visa Processing?" desc="Call us directly or WhatsApp for same-day consultation and express visa processing options." onEnquire={()=>window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I need urgent UAE visa processing.")}`, "_blank", "noopener,noreferrer")}/>
+    <CTABand title="Need Urgent Visa Processing?" desc="Call us directly or WhatsApp for same-day consultation and express visa processing options." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I need urgent UAE visa processing.")}`, "_blank", "noopener,noreferrer")} />
   </main>);
 }
 
@@ -1718,20 +1718,20 @@ function VisaConsultationPage() {
 ═══════════════════════════════════════════════════════════════ */
 export default function App() {
   return (<>
-    <StyleInjector/>
-    <ScrollTop/>
-    <Header/>
+    <StyleInjector />
+    <ScrollTop />
+    <Header />
     <Routes>
-      <Route path="/"                    element={<HomePage/>}/>
-      <Route path="/about"               element={<AboutPage/>}/>
-      <Route path="/contact"             element={<ContactPage/>}/>
-      <Route path="/visa-consultation"   element={<VisaConsultationPage/>}/>
-      {Object.entries(DESTS_DATA).map(([slug,data])=>(
-        <Route key={slug} path={`/${slug}`} element={<DestPage {...data}/>}/>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/visa-consultation" element={<VisaConsultationPage />} />
+      {Object.entries(DESTS_DATA).map(([slug, data]) => (
+        <Route key={slug} path={`/${slug}`} element={<DestPage {...data} />} />
       ))}
-      <Route path="*" element={<HomePage/>}/>
+      <Route path="*" element={<HomePage />} />
     </Routes>
-    <Footer/>
-    <WAFloat/>
+    <Footer />
+    <WAFloat />
   </>);
 }
