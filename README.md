@@ -153,15 +153,6 @@ The `/visa-consultation` page is built specifically for Indian passport holders 
 
 ---
 
-## 📞 Contact & Business Info
-
-**Gulf Apex Consultant L.L.C.**
-Office 301, Business Bay, Dubai, UAE
-📞 +971 313 342 532
-✉️ info@gulfapexconsultant.com
-
----
-
 ## 📄 License
 
 This project is proprietary and built for Gulf Apex Consultant. All rights reserved © 2026 Gulf Apex Consultant L.L.C.
