@@ -612,12 +612,12 @@ const EXPERIENCES = [
 
 const DESTINATIONS = [
   { name:"Dubai",     img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=75", path:"/dubai" },
-  { name:"Abu Dhabi", img:"https://images.unsplash.com/photo-1610199423203-71c7b0f45e1b?w=500&q=75", path:"/abu-dhabi" },
-  { name:"Doha",      img:"https://images.unsplash.com/photo-1580674684081-827b1f2c0c70?w=500&q=75", path:"/doha" },
-  { name:"Riyadh",    img:"https://images.unsplash.com/photo-1591604466107-96bdca0954e3?w=500&q=75", path:"/riyadh" },
-  { name:"Muscat",    img:"https://images.unsplash.com/photo-1590056406796-ef7e5a751a4c?w=500&q=75", path:"/muscat" },
-  { name:"Kuwait",    img:"https://images.unsplash.com/photo-1610082378986-18e95d7b2096?w=500&q=75", path:"/kuwait" },
-  { name:"Bahrain",   img:"https://images.unsplash.com/photo-1609813768225-4d21d513d26d?w=500&q=75", path:"/bahrain" },
+  { name:"Abu Dhabi", img:"https://images.unsplash.com/photo-1610199423203-71c7b0f45e1b?w=500&q=80", path:"/abu-dhabi" },
+  { name:"Doha",      img:"https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=500&q=80", path:"/doha" },
+  { name:"Riyadh",    img:"https://images.unsplash.com/photo-1567438954810-5dc60acd2f5f?w=500&q=80", path:"/riyadh" },
+  { name:"Muscat",    img:"https://images.unsplash.com/photo-1590056406796-ef7e5a751a4c?w=500&q=80", path:"/muscat" },
+  { name:"Kuwait",    img:"https://images.unsplash.com/photo-1610082378986-18e95d7b2096?w=500&q=80", path:"/kuwait" },
+  { name:"Bahrain",   img:"https://images.unsplash.com/photo-1609813768225-4d21d513d26d?w=500&q=80", path:"/bahrain" },
 ];
 
 const SERVICES = [
