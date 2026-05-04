@@ -1,16 +1,169 @@
-# React + Vite
+# Gulf Apex Consultant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Award Winning Travel & Visa Consultancy — Dubai, UAE
 
-Currently, two official plugins are available:
+Live: https://gulf-apex-consultants.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Gulf Apex Consultant is a full-featured travel and visa consultancy website for Dubai-based travel expert **Aman Singh**. It covers Gulf destination tours, holiday packages, UAE visa guidance, and WhatsApp-based lead collection — all in a single React file with zero external CSS dependencies.
 
-## Expanding the ESLint configuration
+Built with: React 18 · React Router v6 · Vite · CSS-in-JS · Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Pages
+
+| Page | Route | Description |
+|------|-------|-------------|
+| Home | `/` | Hero slider, search bar, experiences board, destinations grid, itinerary, testimonials |
+| About | `/about` | Aman Singh's profile, services, values, highlights |
+| Contact | `/contact` | WhatsApp enquiry form, Google Maps embed, contact details |
+| Dubai | `/dubai` | Tours and experiences |
+| Abu Dhabi | `/abu-dhabi` | Tours and packages |
+| Doha | `/doha` | Qatar tours |
+| Riyadh | `/riyadh` | Saudi Arabia tours |
+| Muscat | `/muscat` | Oman tours |
+| Kuwait | `/kuwait` | Kuwait tours |
+| Bahrain | `/bahrain` | Bahrain tours |
+
+---
+
+## Features
+
+- Fully responsive — mobile, tablet, desktop
+- Sticky header with scroll-shadow and active nav highlighting
+- Hover dropdown menus with animated arrow reveals
+- Hero slideshow with Ken Burns zoom and smooth crossfade
+- Experience board — hover to preview, click to enquire
+- Destination cards with zoom-on-hover
+- WhatsApp float button with pulse animation and tooltip
+- Animated footer with running gradient border and newsletter strip
+- Enquiry modal — dates, guests, budget, WhatsApp redirect
+- All enquiries pre-fill a WhatsApp message and open wa.me/971313342532
+- No backend, no database, no Firebase
+
+---
+
+## Animations
+
+- fadeUp, fadeLeft, fadeRight, scaleIn on section reveals
+- Shimmer sweep on all primary buttons
+- Ken Burns hero image zoom
+- Hamburger to X transition
+- Dropdown fadeDown entry
+- Service card float on hover
+- WhatsApp glow pulse ring
+- Timeline stagger entries
+- Footer link arrow reveal on hover
+
+---
+
+## Project Structure
+
+```
+src/
+└── App.jsx       ← Entire app: all CSS, all pages, all components
+public/
+└── index.html
+package.json
+vite.config.js
+README.md
+```
+
+Everything lives in `App.jsx`. Styles are injected via a `StyleInjector` component — no external CSS files required.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm or yarn
+
+### Install and Run
+
+```bash
+git clone https://github.com/your-username/gulf-apex-consultant.git
+cd gulf-apex-consultant
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+Output goes to `/dist` — ready to deploy anywhere.
+
+---
+
+## Deployment
+
+Deployed on Vercel. To deploy your own copy:
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Or connect your GitHub repo at vercel.com for automatic deploys on every push.
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 | UI framework |
+| React Router v6 | Client-side routing |
+| Vite | Build tool and dev server |
+| CSS-in-JS (injected style tag) | All styling, zero external CSS |
+| WhatsApp API (wa.me) | Lead capture and enquiry |
+| Google Fonts | Playfair Display + DM Sans |
+| Vercel | Hosting and deployment |
+
+---
+
+## Destinations Covered
+
+| City | Country | Route |
+|---|---|---|
+| Dubai | UAE | `/dubai` |
+| Abu Dhabi | UAE | `/abu-dhabi` |
+| Doha | Qatar | `/doha` |
+| Riyadh | Saudi Arabia | `/riyadh` |
+| Muscat | Oman | `/muscat` |
+| Kuwait | Kuwait | `/kuwait` |
+| Bahrain | Bahrain | `/bahrain` |
+
+---
+
+## Contact
+
+- Website: https://gulf-apex-consultants.vercel.app/
+- Phone: +971 313 342 532
+- Email: info@gulfapexconsultant.com
+- Office: Office 301, Business Bay, Dubai, UAE
+- WhatsApp: https://wa.me/971313342532
+- Consultant: Aman Singh
+
+---
+
+## Developer
+
+Built and designed by Aman Singh
+amansh9596@gmail.com
+
+---
+
+## License
+
+MIT License
