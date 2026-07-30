@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" fill="none" width="440" height="100">
+  <g transform="translate(16 10)">
+    <circle cx="38" cy="38" r="32" stroke="#F26725" stroke-width="3.5" fill="none"/>
+    <circle cx="38" cy="38" r="12" fill="#F26725"/>
+    <line x1="38" y1="4" x2="38" y2="20" stroke="#F26725" stroke-width="3" stroke-linecap="round"/>
+    <line x1="38" y1="56" x2="38" y2="72" stroke="#F26725" stroke-width="3" stroke-linecap="round"/>
+    <line x1="4" y1="38" x2="20" y2="38" stroke="#F26725" stroke-width="3" stroke-linecap="round"/>
+    <line x1="56" y1="38" x2="72" y2="38" stroke="#F26725" stroke-width="3" stroke-linecap="round"/>
+    <line x1="13.6" y1="13.6" x2="26" y2="26" stroke="#F26725" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="49.1" y1="13.6" x2="36" y2="26" stroke="#F26725" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="13.6" y1="62.9" x2="26" y2="50" stroke="#F26725" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="49.1" y1="62.9" x2="36" y2="50" stroke="#F26725" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="38,5 42,15 38,12 34,15" fill="#F26725"/>
+  </g>
+  <text x="96" y="46" font-family="'Playfair Display', Georgia, serif" font-size="42" font-weight="900" fill="#0A1628" letter-spacing="0.5">Nomad Travel</text>
+  <text x="96" y="72" font-family="'DM Sans', Arial, sans-serif" font-size="17" font-weight="700" fill="#F26725" letter-spacing="4.5" text-transform="uppercase">Co.</text>
+  <line x1="96" y1="78" x2="420" y2="78" stroke="#F26725" stroke-width="2" opacity="0.25"/>
+</svg>

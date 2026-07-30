@@ -1,14 +1,12 @@
-# Gulf Apex Consultant
+# Nomad Travel Co.
 
 Award Winning Travel & Visa Consultancy — Dubai, UAE
-
-Live: https://gulf-apex-consultants.vercel.app/
 
 ---
 
 ## Overview
 
-Gulf Apex Consultant is a full-featured travel and visa consultancy website for Dubai-based travel expert **Aman Singh**. It covers Gulf destination tours, holiday packages, UAE visa guidance, and WhatsApp-based lead collection — all in a single React file with zero external CSS dependencies.
+Nomad Travel Co. is a full-featured travel and visa consultancy website for Dubai-based travel expert **Aman Singh**. It covers Gulf destination tours, holiday packages, UAE visa guidance, and WhatsApp-based lead collection — all in a single React file with zero external CSS dependencies.
 
 Built with: React 18 · React Router v6 · Vite · CSS-in-JS · Vercel
 
@@ -42,7 +40,7 @@ Built with: React 18 · React Router v6 · Vite · CSS-in-JS · Vercel
 - WhatsApp float button with pulse animation and tooltip
 - Animated footer with running gradient border and newsletter strip
 - Enquiry modal — dates, guests, budget, WhatsApp redirect
-- All enquiries pre-fill a WhatsApp message and open wa.me/971313342532
+- All enquiries pre-fill a WhatsApp message and open wa.me/971551234567
 - No backend, no database, no Firebase
 
 ---
@@ -87,8 +85,8 @@ Everything lives in `App.jsx`. Styles are injected via a `StyleInjector` compone
 ### Install and Run
 
 ```bash
-git clone https://github.com/your-username/gulf-apex-consultant.git
-cd gulf-apex-consultant
+git clone https://github.com/your-username/nomad-travel-co.git
+cd nomad-travel-co
 npm install
 npm run dev
 ```
@@ -148,11 +146,10 @@ Or connect your GitHub repo at vercel.com for automatic deploys on every push.
 
 ## Contact
 
-- Website: https://gulf-apex-consultants.vercel.app/
-- Phone: +971 313 342 532
-- Email: info@gulfapexconsultant.com
+- Phone: +971 55 123 4567
+- Email: info@nomadtravel.co
 - Office: Office 301, Business Bay, Dubai, UAE
-- WhatsApp: https://wa.me/971313342532
+- WhatsApp: https://wa.me/971551234567
 - Consultant: Aman Singh
 
 ---

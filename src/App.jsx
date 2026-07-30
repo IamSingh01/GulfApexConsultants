@@ -6,9 +6,9 @@ import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.g
 /* ── FIREBASE CONFIG ─────────────────────────────────────── */
 const firebaseConfig = {
   apiKey: "AIzaSyDEMO_REPLACE_WITH_YOUR_KEY",
-  authDomain: "gulf-apex-consultant.firebaseapp.com",
-  projectId: "gulf-apex-consultant",
-  storageBucket: "gulf-apex-consultant.appspot.com",
+  authDomain: "nomad-travel-co.firebaseapp.com",
+  projectId: "nomad-travel-co",
+  storageBucket: "nomad-travel-co.appspot.com",
   messagingSenderId: "123456789",
   appId: "1:123456789:web:abcdef123456"
 };
@@ -96,10 +96,7 @@ ul{list-style:none}
 .header.scrolled{box-shadow:0 4px 28px rgba(0,0,0,.09);background:rgba(255,255,255,.99)}
 .header-inner{max-width:1200px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px}
 
-.logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
-.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--brand),#ff9f57);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;letter-spacing:.5px;box-shadow:0 4px 14px var(--brand-glow);flex-shrink:0}
-.logo-name{font-family:'Playfair Display',serif;font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.2}
-.logo-sub{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px}
+.logo{display:flex;align-items:center;flex-shrink:0}.logo-img{height:44px;width:auto}
 
 .nav{display:flex;align-items:center;gap:2px}
 .nav-item{position:relative;padding:8px 13px;font-size:13.5px;font-weight:500;color:#444;border-radius:8px;transition:color .2s,background .2s;cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap}
@@ -314,10 +311,7 @@ ul{list-style:none}
 .footer-top{padding:64px 28px 48px}
 .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:44px}
 .footer-brand{max-width:300px}
-.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.footer-logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--brand),#ff9f57);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px}
-.footer-logo-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#fff;line-height:1.2}
-.footer-logo-sub{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px}
+.footer-logo{display:inline-block;background:#fff;border-radius:10px;padding:6px 10px;margin-bottom:18px}.footer-logo-img{height:48px;width:auto}
 .footer-about{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,.42);margin-bottom:22px}
 .footer-socials{display:flex;gap:9px}
 .footer-social{width:36px;height:36px;border-radius:9px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);font-size:13px;font-weight:700;transition:all .22s;text-decoration:none}
@@ -589,7 +583,7 @@ html.dark .wa-label{background:var(--navy-deep)}
 /* ═══════════════════════════════════════════════════════════════
    DATA
 ═══════════════════════════════════════════════════════════════ */
-const WHATSAPP = "971313342532";
+const WHATSAPP = "971551234567";
 
 const HERO_SLIDES = [
   { img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80", badge: "Award Winning Consultancy", title: <>Discover <span>Gulf</span> & Beyond</>, desc: "Expert travel consulting for UAE, Qatar, Saudi Arabia and all Gulf adventures, holiday packages, and visa services." },
@@ -677,7 +671,7 @@ const DESTS_DATA = {
 ═══════════════════════════════════════════════════════════════ */
 function buildWA(d) {
   const dr = (d.dateFrom || d.dateTo) ? `${d.dateFrom || "Flexible"} → ${d.dateTo || "Flexible"}` : "Flexible";
-  const lines = ["Hi Gulf Apex! I want to enquire.", `Package: ${d.packageName}`, `Name: ${d.name || "Not provided"}`, `Date: ${dr}`, `Guests: ${d.guests}`, d.phone ? `Phone: ${d.phone}` : null, d.email ? `Email: ${d.email}` : null, `Budget: ${d.budget}`, d.message ? `Message: ${d.message}` : null].filter(Boolean).join("\n");
+  const lines = ["Hi Nomad Travel! I want to enquire.", `Package: ${d.packageName}`, `Name: ${d.name || "Not provided"}`, `Date: ${dr}`, `Guests: ${d.guests}`, d.phone ? `Phone: ${d.phone}` : null, d.email ? `Email: ${d.email}` : null, `Budget: ${d.budget}`, d.message ? `Message: ${d.message}` : null].filter(Boolean).join("\n");
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines)}`;
 }
 
@@ -790,16 +784,13 @@ function Header() {
   return (<>
     <div className="topbar">
       <div className="topbar-inner">
-        <span>📞 <a href="tel:+971313342532">+971 313 342 532</a> &nbsp;|&nbsp; 📧 <a href="mailto:info@gulfapexconsultant.com">info@gulfapexconsultant.com</a></span>
+        <span>📞 <a href="tel:+971551234567">+971 55 123 4567</a> &nbsp;|&nbsp; 📧 <a href="mailto:info@nomadtravel.co">info@nomadtravel.co</a></span>
         <div className="topbar-right"><span>🇦🇪 Dubai, UAE</span><span>🇮🇳 India</span></div>
       </div>
     </div>
     <header className={`header${scrolled ? " scrolled" : ""}`}>
       <div className="header-inner">
-        <Link to="/" className="logo">
-          <div className="logo-icon">GA</div>
-          <div><div className="logo-name">Gulf Apex Consultant</div><div className="logo-sub">Travel &amp; Tourism Experts</div></div>
-        </Link>
+        <Link to="/" className="logo"><img src="/logo.svg" alt="Nomad Travel Co." className="logo-img" /></Link>
         <nav className="nav">
           {NAV_ITEMS.map(item => item.sub ? (
             <div key={item.label} className="nav-item-wrap" onMouseEnter={() => setDd(item.label)} onMouseLeave={() => setDd(null)}>
@@ -848,10 +839,7 @@ function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-brand">
-            <div className="footer-logo">
-              <div className="footer-logo-icon">GA</div>
-              <div><div className="footer-logo-name">Gulf Apex Consultant</div><div className="footer-logo-sub">Travel &amp; Tourism Experts</div></div>
-            </div>
+            <div className="footer-logo"><img src="/logo.svg" alt="Nomad Travel Co." className="footer-logo-img" /></div>
             <p className="footer-about">A premier travel consultancy based in Dubai — desert safaris, yacht rentals, city tours, holiday packages, and hassle-free Gulf visa services. Built around the way you want to move.</p>
             <div className="footer-socials">
               {[["f", "Facebook"], ["ig", "Instagram"], ["wa", "WhatsApp"], ["in", "LinkedIn"], ["yt", "YouTube"]].map(([l, a]) => (
@@ -888,10 +876,10 @@ function Footer() {
             <div className="footer-col-title">Contact Us</div>
             {[
               ["📍", "Office 301, Business Bay, Dubai, UAE"],
-              ["📞", <a href="tel:+971313342532">+971 313 342 532</a>],
-              ["✉️", <a href="mailto:info@gulfapexconsultant.com">info@gulfapexconsultant.com</a>],
+              ["📞", <a href="tel:+971551234567">+971 55 123 4567</a>],
+              ["✉️", <a href="mailto:info@nomadtravel.co">info@nomadtravel.co</a>],
               ["🕐", "Mon–Sat: 9 AM – 8 PM\nSun: 10 AM – 6 PM"],
-              ["👤", "Gulf Apex Consultant L.L.C.\nTravel & Visa Experts, Dubai"],
+              ["👤", "Nomad Travel Co. L.L.C.\nTravel & Visa Experts, Dubai"],
             ].map(([icon, text], i) => (
               <div key={i} className="footer-contact-item">
                 <span className="fci-icon">{icon}</span>
@@ -919,7 +907,7 @@ function Footer() {
       {/* Bottom */}
       <div className="footer-bottom">
         <div className="footer-bottom-inner">
-          <span>© 2026 Gulf Apex Consultant L.L.C. All rights reserved.</span>
+          <span>© 2026 Nomad Travel Co. L.L.C. All rights reserved.</span>
           <div>
             <Link to="/about">About</Link>
             <a href="#">Privacy Policy</a>
@@ -939,7 +927,7 @@ function WAFloat() {
   return (
     <div className="wa-float">
       <div className="wa-label">Chat on WhatsApp</div>
-      <a href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to enquire about a trip.")}`} target="_blank" rel="noopener noreferrer" className="wa-btn" aria-label="WhatsApp">
+      <a href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Nomad Travel! I want to enquire about a trip.")}`} target="_blank" rel="noopener noreferrer" className="wa-btn" aria-label="WhatsApp">
         <svg viewBox="0 0 32 32" fill="white"><path d="M16 3.5A12.4 12.4 0 0 0 5.3 22.2L4 28l5.9-1.5A12.4 12.4 0 1 0 16 3.5Zm0 22.6c-2 0-3.9-.6-5.5-1.6l-.4-.2-3.2.8.8-3.1-.2-.4A10.1 10.1 0 1 1 16 26.1Zm5.8-7.5c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-.9 1.1c-.2.2-.4.3-.7.1a8.3 8.3 0 0 1-4.1-3.6c-.2-.3 0-.5.1-.7l.5-.6c.1-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.3 4.8.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.5Z" /></svg>
       </a>
     </div>
@@ -955,7 +943,7 @@ function CTABand({ title, desc, onEnquire }) {
       <div className="cta-inner">
         <div className="anim-left"><h2 className="cta-title">{title}</h2><p className="cta-desc">{desc}</p></div>
         <div className="cta-actions anim-right d2">
-          <a href="tel:+971313342532" className="cta-phone">📞 +971 313 342 532</a>
+          <a href="tel:+971551234567" className="cta-phone">📞 +971 55 123 4567</a>
           <button className="btn btn-white" onClick={onEnquire}>Enquire Now</button>
         </div>
       </div>
@@ -1009,7 +997,7 @@ function HomePage() {
               <p className="hero-desc">{s.desc}</p>
               <div className="hero-btns">
                 <button className="btn btn-primary" onClick={() => open()}>Explore Tours</button>
-                <a href="tel:+971313342532" className="btn btn-ghost">📞 Call Us</a>
+                <a href="tel:+971551234567" className="btn btn-ghost">📞 Call Us</a>
               </div>
             </div>
           </div>
@@ -1053,9 +1041,9 @@ function HomePage() {
             <div className="about-stamp"><div className="about-stamp-num">5★</div><div className="about-stamp-text">Certified<br />Agency</div></div>
           </div>
           <div className="about-content anim-right d2">
-            <span className="eyebrow">About Gulf Apex Consultant</span>
+            <span className="eyebrow">About Nomad Travel Co.</span>
             <h2 className="about-title">Award Winning Travel Consultancy in Dubai</h2>
-            <p className="about-text">Gulf Apex Consultant helps travellers understand the Gulf before they book — what to visit, how to move, which documents matter, and who to contact when plans change. From Gulf desert adventures to seamless visa services, every trip is built around you.</p>
+            <p className="about-text">Nomad Travel Co. helps travellers understand the Gulf before they book — what to visit, how to move, which documents matter, and who to contact when plans change. From Gulf desert adventures to seamless visa services, every trip is built around you.</p>
             <div className="about-feats">
               {["Expert Travel Consultants", "Hassle-Free Visa Services", "24/7 WhatsApp Support", "Best Price Guarantee"].map(f => (
                 <div className="about-feat" key={f}><div className="feat-dot" /><div className="feat-text">{f}</div></div>
@@ -1163,7 +1151,7 @@ function HomePage() {
       <div className="container">
         <div className="why-grid">
           <div>
-            <span className="eyebrow">Why Gulf Apex</span>
+            <span className="eyebrow">Why Nomad Travel</span>
             <h2 className="section-title" style={{ textAlign: "left", marginBottom: 32 }}>Your Trusted Local <span>Tour Operator</span></h2>
             <div className="why-feats">
               {WHY_ITEMS.map((w, i) => (
@@ -1182,7 +1170,7 @@ function HomePage() {
             <div className="why-card">
               <div className="why-card-label">What our clients say</div>
               <div className="why-stars">★★★★★</div>
-              <div className="why-review">"Gulf Apex made our dream Dubai trip a reality. Absolutely flawless from start to finish!"</div>
+              <div className="why-review">"Nomad Travel made our dream Dubai trip a reality. Absolutely flawless from start to finish!"</div>
               <div className="why-author">— Emily Watson, Australia</div>
             </div>
           </div>
@@ -1253,9 +1241,9 @@ function AboutPage() {
       <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1800&q=82" alt="Dubai skyline" />
       <div className="about-hero-overlay" />
       <div className="about-hero-content">
-        <span className="eyebrow" style={{ color: "#F9C96E" }}>About Gulf Apex Consultant</span>
+        <span className="eyebrow" style={{ color: "#F9C96E" }}>About Nomad Travel Co.</span>
         <h1>Travel &amp; visa consultancy built for seamless Gulf experiences.</h1>
-        <p>Gulf Apex Consultant helps travellers plan, book and execute unforgettable Gulf journeys — from visa guidance to on-ground support.</p>
+        <p>Nomad Travel Co. helps travellers plan, book and execute unforgettable Gulf journeys — from visa guidance to on-ground support.</p>
       </div>
     </section>
 
@@ -1270,7 +1258,7 @@ function AboutPage() {
             </div>
           </div>
           <div className="about-panel anim-right d2">
-            <h3>Gulf Apex Consultant</h3>
+            <h3>Nomad Travel Co.</h3>
             <strong>Dubai, UAE | Est. 2019</strong>
             <p>A team of passionate travel and visa experts serving travellers from India to the Gulf, with offices in Dubai and partner networks across the region.</p>
           </div>
@@ -1344,7 +1332,7 @@ function AboutPage() {
       </div>
     </section>
 
-    <CTABand title="Ready to Plan Your Dubai Trip?" desc="Speak with our experts for a personalised itinerary, visa guidance and on-ground support." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I'd like to plan a trip.")}`, "_blank", "noopener,noreferrer")} />
+    <CTABand title="Ready to Plan Your Dubai Trip?" desc="Speak with our experts for a personalised itinerary, visa guidance and on-ground support." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Nomad Travel! I'd like to plan a trip.")}`, "_blank", "noopener,noreferrer")} />
   </main>);
 }
 
@@ -1361,7 +1349,7 @@ function ContactPage() {
     e.preventDefault();
     if (!fd.name || !fd.phone) { setStatus("Please fill in your name and phone number."); return; }
     setBusy(true);
-    const msg = `Hi Gulf Apex! I want to enquire about ${fd.service || "Dubai trips"}.\nName: ${fd.name}\nPhone: ${fd.phone}\nEmail: ${fd.email || "N/A"}\nDate: ${fd.dateFrom || "Flexible"} to ${fd.dateTo || "Flexible"}\nGuests: ${fd.guests}\nBudget: ${fd.budget}\nMessage: ${fd.message || "N/A"}`;
+    const msg = `Hi Nomad Travel! I want to enquire about ${fd.service || "Dubai trips"}.\nName: ${fd.name}\nPhone: ${fd.phone}\nEmail: ${fd.email || "N/A"}\nDate: ${fd.dateFrom || "Flexible"} to ${fd.dateTo || "Flexible"}\nGuests: ${fd.guests}\nBudget: ${fd.budget}\nMessage: ${fd.message || "N/A"}`;
     setTimeout(() => {
       saveToFirebase("contact_enquiries", { ...fd, source: "contact_page" });
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
@@ -1386,8 +1374,8 @@ function ContactPage() {
         <div className="contact-grid">
           <div className="contact-info anim-left">
             <h2>Contact Information</h2>
-            <p className="contact-intro">Gulf Apex Consultant is ready to help you book the perfect Gulf escape. Fill out the form and we'll get back to you via WhatsApp or phone.</p>
-            {[["📍", "Office Address", "Office 301, Business Bay, Dubai, UAE"], ["📞", "Phone", <a href="tel:+971313342532">+971 313 342 532</a>], ["✉️", "Email", <a href="mailto:info@gulfapexconsultant.com">info@gulfapexconsultant.com</a>], ["🕒", "Working Hours", "Mon–Sat: 9 AM – 8 PM\nSunday: 10 AM – 6 PM"], ["🏢", "Company", "Gulf Apex Consultant L.L.C.\nDubai-based Travel & Visa Experts"]].map(([icon, title, val], i) => (
+            <p className="contact-intro">Nomad Travel Co. is ready to help you book the perfect Gulf escape. Fill out the form and we'll get back to you via WhatsApp or phone.</p>
+            {[["📍", "Office Address", "Office 301, Business Bay, Dubai, UAE"], ["📞", "Phone", <a href="tel:+971551234567">+971 55 123 4567</a>], ["✉️", "Email", <a href="mailto:info@nomadtravel.co">info@nomadtravel.co</a>], ["🕒", "Working Hours", "Mon–Sat: 9 AM – 8 PM\nSunday: 10 AM – 6 PM"], ["🏢", "Company", "Nomad Travel Co. L.L.C.\nDubai-based Travel & Visa Experts"]].map(([icon, title, val], i) => (
               <div className="ci-item" key={i}>
                 <div className="ci-icon">{icon}</div>
                 <div><div className="ci-title">{title}</div><div className="ci-text" style={{ whiteSpace: "pre-line" }}>{val}</div></div>
@@ -1441,7 +1429,7 @@ function ContactPage() {
       </div>
     </section>
 
-    <CTABand title="Prefer to Call Directly?" desc="Speak with our team for instant assistance with your Dubai travel plans." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to enquire.")}`, "_blank", "noopener,noreferrer")} />
+    <CTABand title="Prefer to Call Directly?" desc="Speak with our team for instant assistance with your Dubai travel plans." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Nomad Travel! I want to enquire.")}`, "_blank", "noopener,noreferrer")} />
   </div>);
 }
 
@@ -1546,7 +1534,7 @@ function VisaConsultationPage() {
     e.preventDefault();
     if (!form.name || !form.phone) { setStatus("Please enter your name and phone."); return; }
     setBusy(true);
-    const msg = `Hi Gulf Apex! I need UAE Visa Consultation.\nVisa Type: ${form.visaType}\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email || "N/A"}\nTravel Date: ${form.travelDate || "Flexible"}\nPassengers: ${form.passengers}\nMessage: ${form.message || "N/A"}`;
+    const msg = `Hi Nomad Travel! I need UAE Visa Consultation.\nVisa Type: ${form.visaType}\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email || "N/A"}\nTravel Date: ${form.travelDate || "Flexible"}\nPassengers: ${form.passengers}\nMessage: ${form.message || "N/A"}`;
     setTimeout(() => {
       saveToFirebase("visa_enquiries", { ...form, source: "visa_page" });
       window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
@@ -1628,7 +1616,7 @@ function VisaConsultationPage() {
             <h3>Get Exact Visa Charges in Minutes</h3>
             <p>Send us a WhatsApp message with your passport details and travel dates — we'll send you a full cost breakdown instantly.</p>
           </div>
-          <button className="btn-wa" onClick={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I want to know the exact UAE visa charges for Indian passport.")}`, "_blank", "noopener,noreferrer")}>
+          <button className="btn-wa" onClick={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Nomad Travel! I want to know the exact UAE visa charges for Indian passport.")}`, "_blank", "noopener,noreferrer")}>
             <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
             Enquire on WhatsApp
           </button>
@@ -1709,7 +1697,7 @@ function VisaConsultationPage() {
       </div>
     </section>
 
-    <CTABand title="Need Urgent Visa Processing?" desc="Call us directly or WhatsApp for same-day consultation and express visa processing options." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Gulf Apex! I need urgent UAE visa processing.")}`, "_blank", "noopener,noreferrer")} />
+    <CTABand title="Need Urgent Visa Processing?" desc="Call us directly or WhatsApp for same-day consultation and express visa processing options." onEnquire={() => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Nomad Travel! I need urgent UAE visa processing.")}`, "_blank", "noopener,noreferrer")} />
   </main>);
 }
 
